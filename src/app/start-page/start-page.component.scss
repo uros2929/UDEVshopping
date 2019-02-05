@@ -1,0 +1,124 @@
+.startPageAll{
+  background-color: rgb(169,168,168);
+  height: 100%;
+  font-family:cursive;
+}
+.startPageAboutUs{
+    background-color: black;
+    clip-path: polygon(50% 99%, 0 0, 100% 0);
+    cursor: pointer;
+    display: grid;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+        h1{
+         align-self: center;
+         color: white;
+         height: 10%;
+       
+        }
+}
+.startPageShop{
+    background-color: rgb(120, 120, 120);
+    display: grid;
+    clip-path: polygon(0% 100%, 0 0, 99% 50%);
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 50%;
+        h1{
+            align-self: center;
+            color: white;
+            height: 5%;
+        }
+}
+
+.startPageGallery{
+    background-color:rgb(120, 120, 120);
+    clip-path: polygon(100% 100%, 1% 50%, 100% 0);
+    cursor: pointer;
+    display: grid;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 50%;  
+    
+        h1{
+            align-self: center;
+            color: white;
+            height: 5%;
+        }
+}
+.startPageContact{
+    background-color: black;
+    bottom: 0;
+    clip-path: polygon(100% 100%,0 100%, 50% 1%);
+    cursor: pointer;
+    display: grid;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+        h1{
+            align-self: center;
+            color: white;
+            height: 10%;
+        }
+}
+
+.startPageAboutUs:hover,.startPageShop:hover,.startPageContact:hover,.startPageGallery:hover{
+    h1{
+        font-size: 45px;
+    }
+}
+
+
+@keyframes animationForAboutUsPathLeftRight{
+  0%{
+        opacity: 1;
+        width: 50%;     
+  }
+  100%{
+        opacity: 0;
+        width:10%;
+  }
+}
+@keyframes animationForAboutUsPathBottomTop{
+    0%{
+          height:50%;
+          opacity: 1;
+    }
+    100%{
+          opacity: 0;
+          height:10%;
+    }
+  }
+@keyframes animationForSelectedPathTopBottom{
+    0%{
+        height: 50%;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        height: 100%;
+        opacity: 0;
+    }
+}
+@keyframes animationForSelectedPathRightLeft{
+    0%{
+        width:50%;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+        opacity: 0;
+    }
+}

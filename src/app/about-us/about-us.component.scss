@@ -1,0 +1,122 @@
+.aboutUsDivAll{
+    background-color: rgb(169,168,168);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto 6%;
+    grid-template-areas:
+    "udevShopLogo"
+    "aboutUsMain"
+    "footer";
+    height: 100%;
+}
+.aboutUsHeader{
+    animation: aboutUsstart 1s both;
+    background-color: rgb(120,120,120);
+    color: white;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: 
+    ". logo buttonGoToShop";
+    grid-area: udevShopLogo;
+
+}
+.logo{
+    grid-area: logo;
+    text-align: center;
+    transform: rotateY(45deg);
+    a{
+        color: white;
+        font-size: 36px;
+        font-family: cursive;
+        text-shadow:15px 10px black;
+        text-decoration: none;
+       
+      
+    }
+}
+.buttonGoToShop{
+    cursor: pointer;
+    display: grid;
+    grid-area: buttonGoToShop;
+    margin-right: 3%;
+    text-align: end;
+
+    i{
+        align-self: center;
+    }
+}
+
+
+.aboutUsMain{
+    animation: aboutUsstart 1s both;
+    background-color: rgb(169,168,168);
+    color: white;  
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows:10% 40% 40% 10%;
+    grid-template-areas: 
+    ". . ."
+    ". aboutUsMainText ."
+    ". aboutUsFollowUs ."
+    ". . .";
+    grid-area: aboutUsMain;
+    .aboutUsMainText{
+        grid-area: aboutUsMainText;
+        text-align: justify;
+    }
+    .aboutUsFollowUs{
+        grid-area: aboutUsFollowUs;
+        text-align: center;
+        a{
+          color: white;
+        }
+        i{
+            margin-top: 5%;
+            margin-right: 2%;
+        }
+        .logoFaceBook:hover{
+            color: blue;
+        }
+        .logoInsta:hover{
+            color: salmon;
+        }
+    }
+}
+
+
+
+.footer{
+    animation: aboutUsstart 1s both;
+    background-color: rgb(120,120,120);
+    color: white;  
+    grid-area: footer;  
+    text-align: center;
+    a{
+        color: white;
+        text-decoration: none;
+        i{
+            cursor: pointer;
+            margin-right: 1%;
+        }
+    }
+    .logoFaceBook:hover{
+        color: blue
+    }
+    .logoInsta:hover{
+        color: salmon;
+    }
+  
+}
+
+
+
+
+
+@keyframes aboutUsstart{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

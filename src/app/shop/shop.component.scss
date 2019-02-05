@@ -1,0 +1,73 @@
+.shopDivAll{
+    background-color: rgb(169,168,168);
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows:15% auto;
+    grid-template-areas: 
+    "shopHeader"
+    "shopMain";
+    height: 100%;
+}
+.shopHeader{
+    background-color: rgb(120,120,120);
+    display: grid;
+    grid-area: shopHeader;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    ". logo ."
+    ". navBar basket";
+    .logo{
+       text-align: center;
+       grid-area: logo;
+        a{
+            color: white;
+            font-size: 24px;
+            font-family: cursive;
+            text-shadow:15px 10px black;
+            text-decoration: none;
+        }
+    }
+    .navBar{
+        align-content: end;
+        display: grid;
+        grid-area: navBar;
+       ul{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 2%;
+            li{
+                cursor: pointer;
+                font-size: 22px;
+                font-weight: 600;
+                font-style: italic;
+                list-style: none;
+              
+            }
+       }
+    }
+    .basket{
+        align-content: center;
+        display: grid;
+        grid-area: basket;
+        justify-content: center;
+        i{
+            cursor: pointer;
+        }
+        p{
+            text-align: center;
+        }
+    }
+}
+.shopMain{
+    background-color: rgb(169,168,168);
+    grid-area: shopMain;
+        .shopMainMarketing-1{
+            background-image: url("../../assets/img/kickz_reebok_DMX_series1600_\ 1400x700.jpg");
+            height: 70%;
+            margin: 2% auto;
+            position: relative;
+            width: 70%;
+        }
+}
