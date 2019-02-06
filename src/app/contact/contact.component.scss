@@ -1,33 +1,57 @@
 .contact{
-     background-color: rgb(169,168,168);
-     display: grid;
-     grid-template-columns: 25% 50% 25%;
-     grid-template-rows: 10% 50% auto;
-     grid-template-areas: 
-     ". . ."
-     ". contactInformations ."
-     ". contactInformationsGoogleMap .";
-     height: 100%;
+    animation: contactStart 1.5s both;
+    display: grid;
+    grid-template-columns: 15% 10% 50% 10% 15%;
+    grid-template-rows: 10% 50% 50% 4%;
+    grid-row-gap: 1%;
+    grid-template-areas: 
+    "logo logo logo logo logo"
+    "contactInformations contactInformations contactInformations contactInformations contactInformations"
+    ". contactInformationsGoogleMap contactInformationsGoogleMap contactInformationsGoogleMap ."
+    "footer footer footer footer footer";
+    height: 100%;
+}
+.logo{
+    grid-area: logo;
+    text-align: center;
+    transform: rotateY(45deg);
+    a{
+        color: white;
+        font-size: 36px;
+        font-family: cursive;
+        text-shadow:15px 10px black;
+        text-decoration: none;
+    }
 }
 .contactInformations{
-    animation: animationForContactInformations 1.3s both;
-    border: 1px solid red;
+    align-content: center;
+    color: white;
+    display: grid;
     grid-area: contactInformations;
+    text-align: center;
+    h1,h3{
+        height: 40px;
+    }
+    h3{
+        margin-top: 1%;
+    }
 }
 .contactInformationsGoogleMap{
-    animation: animationForGoogleMap 1.3s both;
-    border: 1px solid red;
+    border: 1px solid white;
     grid-area: contactInformationsGoogleMap;
 }
-@keyframes animationForContactInformations{
-    0%{
-        transform: translateY(-200%)
-    }
-    100%{
-        transform: translateY(0)
-    }
+.footer{
+    align-content: center;
+    background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
+    color: white;
+    display: grid;
+    grid-area: footer;
+    text-align: center;
+    
 }
-@keyframes animationForGoogleMap{
+
+
+@keyframes contactStart{
     0%{
         opacity: 0;
     }

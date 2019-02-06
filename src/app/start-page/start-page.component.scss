@@ -1,10 +1,10 @@
 .startPageAll{
-  background-color: rgb(169,168,168);
+  background-color: white;  
   height: 100%;
   font-family:cursive;
 }
 .startPageAboutUs{
-    background-color: black;
+    background: linear-gradient(to bottom, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
     clip-path: polygon(50% 99%, 0 0, 100% 0);
     cursor: pointer;
     display: grid;
@@ -20,7 +20,7 @@
         }
 }
 .startPageShop{
-    background-color: rgb(120, 120, 120);
+    background: linear-gradient(to right, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
     display: grid;
     clip-path: polygon(0% 100%, 0 0, 99% 50%);
     cursor: pointer;
@@ -36,7 +36,7 @@
 }
 
 .startPageGallery{
-    background-color:rgb(120, 120, 120);
+    background: linear-gradient(to left, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
     clip-path: polygon(100% 100%, 1% 50%, 100% 0);
     cursor: pointer;
     display: grid;
@@ -53,7 +53,7 @@
         }
 }
 .startPageContact{
-    background-color: black;
+    background: linear-gradient(to top, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
     bottom: 0;
     clip-path: polygon(100% 100%,0 100%, 50% 1%);
     cursor: pointer;

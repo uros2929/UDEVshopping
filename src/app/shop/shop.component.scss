@@ -1,73 +1,136 @@
-.shopDivAll{
-    background-color: rgb(169,168,168);
-    display: grid;
-    grid-template-columns:100%;
-    grid-template-rows:15% auto;
-    grid-template-areas: 
-    "shopHeader"
-    "shopMain";
-    height: 100%;
-}
-.shopHeader{
-    background-color: rgb(120,120,120);
-    display: grid;
-    grid-area: shopHeader;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-    ". logo ."
-    ". navBar basket";
     .logo{
-       text-align: center;
-       grid-area: logo;
+        grid-area: logo;
+        text-align: center;
+        transform: rotateY(45deg);
         a{
             color: white;
-            font-size: 24px;
+            font-size: 36px;
             font-family: cursive;
             text-shadow:15px 10px black;
             text-decoration: none;
         }
     }
-    .navBar{
-        align-content: end;
+    .shopNavBar{
+        border-top: 2px solid rgba(133,135,236,1);
+        border-bottom: 2px solid rgba(133,135,236,1);
         display: grid;
-        grid-area: navBar;
-       ul{
-        justify-content: center;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-column-gap: 2%;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 40px;
+       grid-template-areas:
+       ". ul shoppingBasket";
+        text-align: center;
+        ul{
+            align-self: center;
+            display: flex;
+            grid-area: ul;
+            justify-content: center;
+            margin-bottom: 0;
+           
             li{
                 cursor: pointer;
-                font-size: 22px;
-                font-weight: 600;
-                font-style: italic;
+                flex-direction: column;
+                font-size: 20px;
                 list-style: none;
-              
+                padding: 10px;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
             }
-       }
+        }
+        .shoppingBasket{
+            display: flex;
+            color: white;
+            grid-area: shoppingBasket;
+            justify-content: center;
+            i{
+                cursor: pointer;
+                align-self: end;
+            }
+        }
     }
-    .basket{
-        align-content: center;
+
+    .shopMainMarketing{
         display: grid;
-        grid-area: basket;
-        justify-content: center;
-        i{
-            cursor: pointer;
+        grid-template-columns:10.5% 10% 29% 1% 29% 10% 10.5%;
+        grid-template-rows:5% 60% 70% 60% 5%;
+        grid-row-gap: 1%;
+        grid-template-areas: 
+        ". . . . . . ."
+        ". marketing1 marketing1 marketing1 marketing1 marketing1 ."
+        ". marketing2 marketing2 . marketing3 marketing3 ."
+        ". marketing4 marketing4 marketing4 marketing4 marketing4 ."
+        "footer footer footer footer footer footer footer";
+        height: 100%;
+        .marketing-1{
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            grid-area: marketing1;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+          
         }
-        p{
-            text-align: center;
+        .marketing-2{
+            background-image: url('../../assets/shopAssets/kickz_deva_state_quadrate.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            grid-area: marketing2;
+            
+        }
+        .marketing-3{
+            background-image: url('../../assets/shopAssets/bhm-collage.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            grid-area: marketing3;
+           
+        }
+        .marketing-4{
+            background-image: url('../../assets/shopAssets/air-jordan-12-retro-black-pink-12.jpg');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            grid-area: marketing4; 
         }
     }
-}
-.shopMain{
-    background-color: rgb(169,168,168);
-    grid-area: shopMain;
-        .shopMainMarketing-1{
-            background-image: url("../../assets/img/kickz_reebok_DMX_series1600_\ 1400x700.jpg");
-            height: 70%;
-            margin: 2% auto;
-            position: relative;
-            width: 70%;
-        }
+    .footer{
+        align-content: center;
+        background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
+        color: white;
+        display: grid;
+        grid-area: footer;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shopStart{
+    0%{
+        background: white;
+        opacity: 0;
+    }
+    100%{
+        background: linear-gradient(to left, rgba(19,19,19,1) 1%,rgba(44,44,44,1) 5%,rgba(76,76,76,1) 20%,rgba(89,89,89,1) 30%,rgba(89,89,89,1) 69%,rgba(76,76,76,1) 80%,rgba(44,44,44,1) 95%,rgba(19,19,19,1) 99%);
+        opacity: 1;
+    }
 }
