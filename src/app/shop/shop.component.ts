@@ -19,13 +19,13 @@ export class ShopComponent implements OnInit {
   changeImgForMarketing1() {
     let marketing1 = document.getElementById('marketing-1'),
       index = 0;
-    marketing1.style.backgroundImage = "url('../../assets/shopAssets/" + this.marketing1Array[index] + "')";
+    marketing1.style.backgroundImage = "url('./assets/shopAssets/" + this.marketing1Array[index] + "')";
     setInterval(() => {
       index++;
-      marketing1.style.backgroundImage = "url('../../assets/shopAssets/" + this.marketing1Array[index] + "')";
+      marketing1.style.backgroundImage = "url('./assets/shopAssets/" + this.marketing1Array[index] + "')";
       if (index == this.marketing1Array.length) {
         index=0;
-        marketing1.style.backgroundImage = "url('../../assets/shopAssets/" + this.marketing1Array[index] + "')";
+        marketing1.style.backgroundImage = "url('./assets/shopAssets/" + this.marketing1Array[index] + "')";
       }
     }, 6000)
 
