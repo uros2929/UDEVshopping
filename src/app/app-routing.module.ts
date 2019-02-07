@@ -6,6 +6,10 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ShoesMainComponent } from './shoes-main/shoes-main.component';
+import { ClothesComponent } from './clothes/clothes.component';
+import { BrandsComponent } from './brands/brands.component';
+import { SalesComponent } from './sales/sales.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/start', pathMatch:'full'},
@@ -14,7 +18,11 @@ const routes: Routes = [
   {path:'shop', component:ShopComponent},
   {path:'gallery', component:GalleryComponent},
   {path:'contact', component:ContactComponent},
-  {path:'shop/shoes', component:ShoesMainComponent}
+  {path:'shop/shoes', component:ShoesMainComponent},
+  {path:'shop/clothes', component:ClothesComponent},
+  {path:'shop/brands', component:BrandsComponent},
+  {path:'shop/sales', component:SalesComponent},
+  {path:'shop/accessories', component:AccessoriesComponent}
 ];
 
 @NgModule({

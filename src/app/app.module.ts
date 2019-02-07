@@ -9,6 +9,10 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ShoesMainComponent } from './shoes-main/shoes-main.component';
+import { ClothesComponent } from './clothes/clothes.component';
+import { BrandsComponent } from './brands/brands.component';
+import { SalesComponent } from './sales/sales.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ShoesMainComponent } from './shoes-main/shoes-main.component';
     ShopComponent,
     ContactComponent,
     GalleryComponent,
-    ShoesMainComponent
+    ShoesMainComponent,
+    ClothesComponent,
+    BrandsComponent,
+    SalesComponent,
+    AccessoriesComponent
   ],
   imports: [
     BrowserModule,

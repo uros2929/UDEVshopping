@@ -4,7 +4,7 @@
   font-family:cursive;
 }
 .startPageAboutUs{
-    background: linear-gradient(to bottom, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
+    background: linear-gradient(to bottom,  rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
     clip-path: polygon(50% 99%, 0 0, 100% 0);
     cursor: pointer;
     display: grid;
@@ -53,7 +53,7 @@
         }
 }
 .startPageContact{
-    background: linear-gradient(to top, rgb(76,76,76) 0%,rgb(89,89,89) 12%,rgb(102,102,102) 25%,rgb(71,71,71) 39%,rgb(44,44,44) 50%,rgb(17,17,17) 60%,rgb(0,0,0) 81%,rgb(43,43,43) 94%,rgb(28,28,28) 97%,rgb(19,19,19) 100%);
+    background: linear-gradient(to top, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
     bottom: 0;
     clip-path: polygon(100% 100%,0 100%, 50% 1%);
     cursor: pointer;

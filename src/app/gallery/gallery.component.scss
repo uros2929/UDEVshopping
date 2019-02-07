@@ -1,0 +1,48 @@
+.gallertyAll{
+animation: galleryStart 1.5s both;
+height: 100%;
+}
+.logo{
+    align-content: center;
+    border-bottom: 2px dashed rgba(107,107,229,1);
+    display: grid;
+    grid-area: logo;
+    text-align: center;
+    a{
+        color: rgba(107,107,229,1);
+        font-family: cursive;
+        text-shadow:15px 10px silver;
+        text-decoration: none;
+        transform: rotateY(45deg);
+        h1{
+            font-size: 42px;
+            font-weight: 900;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes galleryStart{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

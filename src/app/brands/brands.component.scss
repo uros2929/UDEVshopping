@@ -1,5 +1,5 @@
-.shoesAll{
-    animation: shoseStart 1.5s both;
+.brandsAll{
+    animation: brandsStart 1.5s both;
     height: 100%;
 }
 
@@ -70,7 +70,7 @@
 
 
 
-@keyframes shoseStart{
+@keyframes brandsStart{
     0%{
         opacity: 0;
     }

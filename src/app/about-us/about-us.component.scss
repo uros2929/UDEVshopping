@@ -1,15 +1,16 @@
 .aboutUsDivAll{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows:  100%;
+    grid-template-columns:100%;
+    grid-template-rows:10% 100%;
     grid-template-areas:
+    "logo"
     "aboutUsMain";
     height: 100%;
 }
 .aboutUsHeader{
     animation: aboutUsstart 1.5s both;
     background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
-    color: white;
+    color: black;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-areas: 
@@ -18,69 +19,54 @@
 
 }
 .logo{
-    align-self: center;
+    align-content: center;
+    border-bottom: 2px dashed rgba(107,107,229,1);
+    display: grid;
     grid-area: logo;
     text-align: center;
-    transform: rotateY(45deg);
     a{
-        color: white;
-        font-size: 36px;
+        color: rgba(107,107,229,1);
         font-family: cursive;
-        text-shadow:15px 10px black;
+        text-shadow:15px 10px silver;
         text-decoration: none;
-       
-      
-    }
-}
-.buttonGoToShop{
-    cursor: pointer;
-    display: grid;
-    grid-area: buttonGoToShop;
-    margin-right: 3%;
-    text-align: end;
-    a{
-        color: white;
-        display: grid;
-        text-decoration: none;
-        i{
-            align-self: center;
+        transform: rotateY(45deg);
+        h1{
+            font-size: 42px;
+            font-weight: 900;
         }
     }
-  
 }
-
 .aboutUsMain{
     animation: aboutUsstart 3s both; 
     display: grid;
     grid-template-columns: 5% 20% 50% 20% 5%;
-    grid-template-rows:5% 40% 70% 40% 4%;
+    grid-template-rows:10% 50% 70% 40% 4%;
     grid-template-areas:
     ". . . . ."
     ". . aboutUsMainText . ."
-    ". . aboutUsImg . ."
+    ". aboutUsImg aboutUsImg aboutUsImg ."
     ". . aboutUsFollowUs . ."
     "footer footer footer footer footer";
 
     .aboutUsMainText{
-        color: white;
         grid-area: aboutUsMainText;
         text-align: justify;
         h1{
-            color: white;
+            color: black;
             font-weight: 700;
             font-style: italic;
             margin-bottom: 5%;
             text-align: center;
         }
         h3{
-            color: white;
+            color: black;
             font-style: italic;
             font-family: cursive;
         }
     }
     .aboutUsImg{
         background-image: url('./assets/20161121-Nike-Jordan-Bastille-Opening-20_hd_1600.jpg');
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         grid-area: aboutUsImg;
     }
@@ -88,8 +74,9 @@
         grid-area: aboutUsFollowUs;
         text-align: center;
         h2{
-            color: white;
+            color: black;
             font-style: italic;
+            font-weight: 700;
             margin-top: 5%;
         }
         h3{
