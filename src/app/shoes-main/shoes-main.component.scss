@@ -67,6 +67,170 @@
     }
 }
 
+.shoesMain{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "shoesSearch shoesShop";
+    height: 100%;
+    .shoesSearch{
+        border-right: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        grid-area:shoesSearch; 
+        select{
+            margin: 5% auto;
+            position: relative;
+            width: 50%;
+            
+        }
+        .shoseSize{
+            margin: 5% auto;
+            height: 20%;
+            text-align: center;
+            width: 70%;
+            h4{
+                color: rgba(107,107,229,1);
+                font-weight: 600;
+                font-style: italic;
+            }
+            form{
+                overflow-y: scroll;
+                height: 50%;
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 100%;
+            }
+        }
+        .shoseBrand{
+            margin: 5% auto;
+            height: 20%;
+            text-align: center;
+            width: 70%;
+            h4{
+                color: rgba(107,107,229,1);
+                font-weight: 600;
+                font-style: italic;
+            }
+            form{
+                overflow-y: scroll;
+                height: 50%;
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 100%;
+            }
+        }
+    }
+    .shoesShop{
+        display: grid;
+        grid-template-columns: 24% 1% 24% 1% 24% 1% 24%;
+        grid-template-rows: 100% 100%;
+        grid-template-areas: 
+        "card1 . card2 . card3 . card4"
+        "card5 . card6 . card7 . card8"
+        "card9 . card10 . card11 . card12"
+        "card13 . card14 . card15 . card16"
+        "card17 . card18 . card19 . card20";
+        height: 50%;
+        text-align: center;
+        width: 100%;
+        grid-area:shoesShop; 
+        .card1{
+            grid-area: card1;
+            .card-img{
+                height: 50%;
+                background-image: url('../../assets/shoesAssets/Nike-Air-Max-97.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 80%;
+                }
+            }
+        }
+        .card2{
+            grid-area: card2;
+            .card-img{
+                height: 50%;
+                background-image: url('../../assets/shoesAssets/Air-Jordan-11-Concord-2018.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 80%;
+                }
+            }
+        }
+        .card3{
+            grid-area: card3;
+            .card-img{
+                height: 50%;
+                background-image: url('../../assets/shoesAssets/under-armour-charged-bandit-2_men.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 80%;
+                }
+            }
+        }
+        .card4{
+            grid-area: card4;
+            .card-img{
+                height: 50%;
+                background-image: url('../../assets/shoesAssets/Adidas_EQT-support-ADV_Black_Turbo_Red-1.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 80%;
+                }
+            }
+        }
+        .card5{
+            grid-area: card5;
+            .card-img{
+                height: 50%;
+                background-image: url('../../assets/shoesAssets/jordan-kids.jpg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 80%;
+                }
+            }
+        }
+    }
+    .card-button button{
+        background-color: white;
+        border: 2px solid rgba(107,107,229,1);
+        border-radius: 25%;
+        padding: 5px;
+        width: 50%;
+    }
+    .card-button button:hover{
+        background-color: rgba(107,107,229,1);
+        border: 2px solid black;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 
 
 
