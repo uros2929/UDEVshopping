@@ -1,5 +1,9 @@
 # UDEVshoppingSite
 
+## Online [DEMO](https://uros2929.github.io/UDEVshopping/) version
+
+This is a project for shopping website. Was generate with HTML, SCSS, GRID, ANGULAR, JS, BOOTSTRAP.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server
