@@ -1,0 +1,89 @@
+.basketAll{
+    animation: basketStart 1.5s both;
+    height: 100%;
+}
+.logo{
+    align-content: center;
+    display: grid;
+    grid-area: logo;
+    text-align: center;
+    a{
+        color: rgba(107,107,229,1);
+        font-family: cursive;
+        text-shadow:15px 10px silver;
+        text-decoration: none;
+        transform: rotateY(45deg);
+        h1{
+            font-size: 42px;
+            font-weight: 900;
+        }
+    }
+}
+.shopNavBar{
+    border-top: 2px dashed rgba(107,107,229,1);
+    border-bottom: 2px dashed rgba(107,107,229,1);
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 40px;
+   grid-template-areas:
+   ". ul shoppingBasket";
+    text-align: center;
+    ul{
+        align-self: center;
+        display: flex;
+        grid-area: ul;
+        justify-content: center;
+        margin-bottom: 0;
+       
+        li{
+            cursor: pointer;
+            flex-direction: column;
+            font-size: 20px;
+            list-style: none;
+            padding: 10px;
+            a{
+                color: black;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+        li:hover{
+            background-color: rgba(107,107,229,1);
+            a{
+                color: white;
+            }
+        }
+    }
+    .shoppingBasket{
+        display: flex;
+        color: black;
+        grid-area: shoppingBasket;
+        justify-content: center;
+        i{
+            cursor: pointer;
+            align-self: end;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes basketStart{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
