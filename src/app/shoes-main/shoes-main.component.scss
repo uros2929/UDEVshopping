@@ -135,11 +135,9 @@
         text-align: center;
         width: 100%;
         grid-area:shoesShop; 
-        .card1{
-            grid-area: card1;
+        .card{
             .card-img{
                 height: 50%;
-                background-image: url('../../assets/shoesAssets/Nike-Air-Max-97.jpg');
                 background-size: contain;
                 background-repeat: no-repeat;
             }
@@ -147,71 +145,12 @@
                 height: 40%;
                 .card-title{
                     font-weight: 700;
-                    height: 80%;
+                    height: 40%;
                 }
-            }
-        }
-        .card2{
-            grid-area: card2;
-            .card-img{
-                height: 50%;
-                background-image: url('../../assets/shoesAssets/Air-Jordan-11-Concord-2018.jpg');
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .card-body{
-                height: 40%;
-                .card-title{
-                    font-weight: 700;
-                    height: 80%;
-                }
-            }
-        }
-        .card3{
-            grid-area: card3;
-            .card-img{
-                height: 50%;
-                background-image: url('../../assets/shoesAssets/under-armour-charged-bandit-2_men.jpg');
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .card-body{
-                height: 40%;
-                .card-title{
-                    font-weight: 700;
-                    height: 80%;
-                }
-            }
-        }
-        .card4{
-            grid-area: card4;
-            .card-img{
-                height: 50%;
-                background-image: url('../../assets/shoesAssets/Adidas_EQT-support-ADV_Black_Turbo_Red-1.jpg');
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .card-body{
-                height: 40%;
-                .card-title{
-                    font-weight: 700;
-                    height: 80%;
-                }
-            }
-        }
-        .card5{
-            grid-area: card5;
-            .card-img{
-                height: 50%;
-                background-image: url('../../assets/shoesAssets/jordan-kids.jpg');
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            .card-body{
-                height: 40%;
-                .card-title{
-                    font-weight: 700;
-                    height: 80%;
+                .card-button{
+                   button{
+                       width: 50%;
+                   }
                 }
             }
         }
