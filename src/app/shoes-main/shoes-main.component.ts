@@ -101,25 +101,25 @@ export class ShoesMainComponent implements OnInit {
 
 
   }
-  // valueFromFormSize(event) {
-  //   this.choosenForSearchObj.size = [];
-  //   for (let index = 0; index < event.target.form.length; index++) {
-  //     if (event.target.form[index].checked == true) {
-  //       this.choosenForSearchObj.size.push(event.target.form[index].value)
-  //     }
-  //   }
-  //   console.log(this.choosenForSearchObj)
-  // }
-  // valueFromFormBrands(event) {
-  //   this.choosenForSearchObj.brands = []
-  //   for (let index = 0; index < event.target.form.length; index++) {
-  //     if (event.target.form[index].checked == true) {
-  //       this.choosenForSearchObj.brands.push(event.target.form[index].value)
+  valueFromFormSize(event) {
+    this.choosenForSearchObj.size = [];
+    for (let index = 0; index < event.target.form.length; index++) {
+      if (event.target.form[index].checked == true) {
+        this.choosenForSearchObj.size.push(event.target.form[index].value)
+      }
+    }
+    console.log(this.choosenForSearchObj)
+  }
+  valueFromFormBrands(event) {
+    this.choosenForSearchObj.brands = []
+    for (let index = 0; index < event.target.form.length; index++) {
+      if (event.target.form[index].checked == true) {
+        this.choosenForSearchObj.brands.push(event.target.form[index].value)
 
-  //     }
-  //   }
-  //   console.log(this.choosenForSearchObj)
-  // }
+      }
+    }
+    console.log(this.choosenForSearchObj)
+  }
 
   returnKeysShowShoesOnStart(index) {
     this.arrayKeysOfCards = Object.keys(this.cardsObj);
