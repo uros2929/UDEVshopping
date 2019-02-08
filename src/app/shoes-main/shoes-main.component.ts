@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 
@@ -28,7 +28,7 @@ export class ShoesMainComponent implements OnInit {
       price: "100$",
       gender: "men",
       brand: 'jordan',
-      size: '40,41,43,45,45.5,46'
+      size: '40,41,42,43,45,45.5,46'
     },
     card3: {
       class: "card",
@@ -71,6 +71,7 @@ export class ShoesMainComponent implements OnInit {
 
   arrayKeysOfCards = [];
   arrayOfCardAll = [];
+  arrayForShowSize = [];
   index = 1;
 
   choosenForSearchObj = {
@@ -81,7 +82,7 @@ export class ShoesMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.returnKeysShowShoesOnStart(this.index)
+    this.returnKeysShowShoesOnStart(this.index);
   }
 
   valueFromSelectListGender(event) {
@@ -102,14 +103,12 @@ export class ShoesMainComponent implements OnInit {
 
   }
   valueFromFormSize(event) {
-    this.choosenForSearchObj.size = [];
-    for (let index = 0; index < event.target.form.length; index++) {
-      if (event.target.form[index].checked == true) {
-        this.choosenForSearchObj.size.push(event.target.form[index].value)
-      }
-    }
-    console.log(this.choosenForSearchObj)
+    this.index = 1;
+    this.getSizeOfShose(event);
+    this.makeArrayForShowSize();
+    this.disableRadioBtns(event,true)  // MUST DO THIS, I NEED TO FIND BUG :/
   }
+
   valueFromFormBrands(event) {
     this.choosenForSearchObj.brands = []
     for (let index = 0; index < event.target.form.length; index++) {
@@ -120,6 +119,11 @@ export class ShoesMainComponent implements OnInit {
     }
     console.log(this.choosenForSearchObj)
   }
+
+
+
+
+
 
   returnKeysShowShoesOnStart(index) {
     this.arrayKeysOfCards = Object.keys(this.cardsObj);
@@ -142,12 +146,52 @@ export class ShoesMainComponent implements OnInit {
     }
   }
 
-  getData(event) {
-    let clickedItem = event.target.offsetParent.style.gridRowStart;
+  getSizeOfShose(event) {
+    this.choosenForSearchObj.size = [];
+    for (let index = 0; index < event.target.form.length; index++) {
+      if (event.target.form[index].checked == true) {
+        this.choosenForSearchObj.size.push(event.target.form[index].value)
+      }
+    }
+    console.log(this.choosenForSearchObj.size)
+  }
+  makeArrayForShowSize() {
+    for (let index = 0; index < this.arrayOfCardAll.length; index++) {
+      if (this.arrayOfCardAll[index][6].includes(this.choosenForSearchObj.size) == true) {
+        this.arrayForShowSize.push(this.arrayOfCardAll[index])
+      }
+    }
+    for (let index = 0; index < this.arrayForShowSize.length; index++) {
+      this.arrayForShowSize[index][0] = "card" + this.index;
+      this.index++
 
-    console.log();
+    }
+    this.arrayOfCardAll = this.arrayForShowSize;
+  }
+  disableRadioBtns(event,disableValue) {
+    let allFormBtns = event.target.form;
+    for (let index = 0; index < allFormBtns.length; index++) {
+      allFormBtns[index].disabled = disableValue;
+    }
   }
 
+  resetSearch(){
+    this.arrayKeysOfCards = [];
+    this.arrayOfCardAll = [];
+    this.arrayForShowSize = [];
+    this.index = 1;
+    this.choosenForSearchObj = {
+      gender: [],
+      size: [],
+      brands: []
+    }
+    console.log(  document.getElementById('chooseSize'))
+    this.returnKeysShowShoesOnStart(this.index);
+    for (let index = 0; index < 28; index++) {
+      document.getElementById('chooseSize')[index].disabled=false;
+      document.getElementById('chooseSize')[index].checked=false;      // MUST DO THIS, I NEED TO FIND BUG :/
+    }
+  }
 }
 
 
