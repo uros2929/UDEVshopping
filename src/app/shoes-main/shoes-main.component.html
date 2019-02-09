@@ -72,8 +72,8 @@
             <button (click)="resetSearch()">RESET</button>
             <p>If you 100% true search, click reset button, after first search !</p>
         </div>
-        <div class="shoesShop" *ngFor="let data of arrayOfCardAll">
-            <div  [style.gridArea]="data[0]" class="card">
+        <div class="shoesShop" >
+            <div *ngFor="let data of arrayOfCardAll" [style.gridArea]="data[0]" class="card">
                 <div class="card-img" [style.backgroundImage]="'url('+ data[1] +')'"></div>                                             
                 <div class="card-body">
                     <div class="card-title">{{data[2]}} <br> {{data[3]}}</div>

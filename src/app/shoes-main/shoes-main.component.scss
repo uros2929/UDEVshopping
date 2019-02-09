@@ -75,48 +75,61 @@
     height: 100%;
     text-align: center;                                      
     .shoesSearch{
-        border-right: 2px dashed rgba(107,107,229,1);
+        background:linear-gradient(to bottom, rgba(102,102,102,1) 0%,rgba(91,91,91,1) 18%,rgba(121,121,121,1) 31%,rgba(181,181,181,1) 45%,rgba(181,181,181,1) 56%,rgba(255,255,255,1) 73%);
         display: flex;
         flex-direction: column;
         grid-area:shoesSearch; 
         select{
+            background-color: rgba(107,107,229,1);
+            color: white;
             margin: 5% auto;
             position: relative;
             width: 50%;
         }
         .shoseSize{
-            margin: 5% auto;
+            align-content: center;
+            justify-content: center;
+            display: grid;
+            margin: 3% auto;
             height: 30%;
             text-align: center;
             width: 70%;
             h4{
-                color: rgba(107,107,229,1);
+                color: white;
                 font-weight: 600;
                 font-style: italic;
             }
             form{
-                overflow-y:scroll;
-                height: 50%;
+                background-color: rgba(107,107,229,1);
+                color: white;
                 display: grid;
+                font-weight: 600;
                 grid-template-columns: auto auto;
+                height: 50%;
+                overflow-y:scroll;
+                text-align: start;
                 width: 100%;
             }
         }
         .shoseBrand{
-            margin: 5% auto;
+            align-content: center;
+            justify-content: center;
+            margin: 3% auto;
             height: 20%;
             text-align: center;
             width: 70%;
             h4{
-                color: rgba(107,107,229,1);
+                color: white;
                 font-weight: 600;
                 font-style: italic;
             }
             form{
-                overflow-y: scroll;
+                background-color: rgba(107,107,229,1);
+                color: white;
                 height: 50%;
                 display: grid;
                 grid-template-columns: auto auto;
+                overflow-y: auto;
                 width: 100%;
             }
         }
@@ -142,7 +155,7 @@
     .shoesShop{
         display: grid;
         grid-template-columns: 24% 1% 24% 1% 24% 1% 24%;
-        grid-template-rows: 100% 100%;
+        grid-template-rows: 100% 100% 100% 100% 100%;
         grid-template-areas: 
         "card1 . card2 . card3 . card4"
         "card5 . card6 . card7 . card8"
@@ -182,7 +195,6 @@
     }
     .card-button button:hover{
         background-color: rgba(107,107,229,1);
-        border: 2px solid black;
         color: white;
         cursor: pointer;
     }

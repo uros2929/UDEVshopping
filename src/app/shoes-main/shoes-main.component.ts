@@ -66,7 +66,6 @@ export class ShoesMainComponent implements OnInit {
       brand: "jordan",
       size: "36.5,37,38"
     }
-
   }
 
   arrayKeysOfCards = [];
