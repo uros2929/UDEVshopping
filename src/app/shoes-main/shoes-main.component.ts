@@ -71,6 +71,7 @@ export class ShoesMainComponent implements OnInit {
 
   arrayKeysOfCards = [];
   arrayOfCardAll = [];
+  arrayForShowBrands = [];
   arrayForShowSize = [];
   index = 1;
 
@@ -92,12 +93,16 @@ export class ShoesMainComponent implements OnInit {
     this.choosenForSearchObj.gender.push(event.target.value);
     if (this.choosenForSearchObj.gender[0] == "men") {
       this.returnKeysShowShoesOnGenderChange('men');
+      this.resetForms();
     } else if (this.choosenForSearchObj.gender[0] == "women") {
       this.returnKeysShowShoesOnGenderChange('women');
+      this.resetForms();
     } else if (this.choosenForSearchObj.gender[0] == "kids") {
       this.returnKeysShowShoesOnGenderChange('kids');
+      this.resetForms();
     } else if (this.choosenForSearchObj.gender[0] == "") {
-      this.returnKeysShowShoesOnStart(this.index)
+      this.returnKeysShowShoesOnStart(this.index);
+      this.resetForms();
     }
 
 
@@ -109,14 +114,9 @@ export class ShoesMainComponent implements OnInit {
   }
 
   valueFromFormBrands(event) {
-    this.choosenForSearchObj.brands = []
-    for (let index = 0; index < event.target.form.length; index++) {
-      if (event.target.form[index].checked == true) {
-        this.choosenForSearchObj.brands.push(event.target.form[index].value)
-
-      }
-    }
-    console.log(this.choosenForSearchObj)
+    this.index = 1;
+    this.getBrandName(event);
+    this.makeArrayForBrand();
   }
 
 
@@ -126,10 +126,10 @@ export class ShoesMainComponent implements OnInit {
 
   returnKeysShowShoesOnStart(index) {
     this.arrayKeysOfCards = Object.keys(this.cardsObj);
-      for (const prop of this.arrayKeysOfCards) {
-        this.arrayOfCardAll.push([this.cardsObj[prop].class + index, this.cardsObj[prop].img, this.cardsObj[prop].title, this.cardsObj[prop].price, this.cardsObj[prop].gender, this.cardsObj[prop].brand, this.cardsObj[prop].size]);
-        index++
-      }
+    for (const prop of this.arrayKeysOfCards) {
+      this.arrayOfCardAll.push([this.cardsObj[prop].class + index, this.cardsObj[prop].img, this.cardsObj[prop].title, this.cardsObj[prop].price, this.cardsObj[prop].gender, this.cardsObj[prop].brand, this.cardsObj[prop].size]);
+      index++
+    }
   }
 
   returnKeysShowShoesOnGenderChange(gender) {
@@ -143,6 +143,31 @@ export class ShoesMainComponent implements OnInit {
     }
   }
 
+  getBrandName(event) {
+    this.choosenForSearchObj.brands = []
+    for (let index = 0; index < event.target.form.length; index++) {
+      if (event.target.form[index].checked == true) {
+        this.choosenForSearchObj.brands.push(event.target.form[index].value)
+
+      }
+    }
+  }
+
+  makeArrayForBrand() {
+    this.arrayForShowBrands = [];
+    for (let index = 0; index < this.arrayOfCardAll.length; index++) {
+      if (this.arrayOfCardAll[index][5].includes(this.choosenForSearchObj.brands) == true) {
+        this.arrayForShowBrands.push(this.arrayOfCardAll[index])
+      }
+
+    }
+    for (let index = 0; index < this.arrayForShowBrands.length; index++) {
+      this.arrayForShowBrands[index][0] = "card" + this.index;
+      this.index++;
+    }
+    this.arrayOfCardAll = this.arrayForShowBrands;
+  }
+
   getSizeOfShose(event) {
     this.choosenForSearchObj.size = [];
     for (let index = 0; index < event.target.form.length; index++) {
@@ -153,7 +178,7 @@ export class ShoesMainComponent implements OnInit {
   }
 
   makeArrayForShowSize() {
-    this.arrayForShowSize=[];
+    this.arrayForShowSize = [];
     for (let index = 0; index < this.arrayOfCardAll.length; index++) {
       if (this.arrayOfCardAll[index][6].includes(this.choosenForSearchObj.size) == true) {
         this.arrayForShowSize.push(this.arrayOfCardAll[index])
@@ -165,10 +190,10 @@ export class ShoesMainComponent implements OnInit {
     }
     this.arrayOfCardAll = this.arrayForShowSize;
   }
-  
 
 
-  resetSearch(){
+
+  resetSearch() {
     this.arrayKeysOfCards = [];
     this.arrayOfCardAll = [];
     this.arrayForShowSize = [];
@@ -179,9 +204,17 @@ export class ShoesMainComponent implements OnInit {
       brands: []
     }
     this.returnKeysShowShoesOnStart(this.index);
-    for (let index = 0; index < 28; index++) {
-      document.getElementById('chooseSize')[index].checked=false; 
-    }    
+    this.resetForms();
+  }
+  resetForms() {
+    let formBrandLenght = document.getElementsByTagName('form')[0].length,
+      formSizeLenght = document.getElementsByTagName('form')[1].length;
+    for (let index = 0; index < formSizeLenght; index++) {
+      document.getElementById('chooseSize')[index].checked = false;
+    }
+    for (let index = 0; index < formBrandLenght; index++) {
+      document.getElementById('chooseBrand')[index].checked = false;
+    }
   }
 }
 

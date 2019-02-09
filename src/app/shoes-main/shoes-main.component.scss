@@ -73,8 +73,9 @@
     grid-template-areas: 
     "shoesSearch shoesShop";
     height: 100%;
-    text-align: center;
+    text-align: center;                                      
     .shoesSearch{
+        border-right: 2px dashed rgba(107,107,229,1);
         display: flex;
         flex-direction: column;
         grid-area:shoesSearch; 
@@ -82,7 +83,6 @@
             margin: 5% auto;
             position: relative;
             width: 50%;
-            
         }
         .shoseSize{
             margin: 5% auto;
@@ -95,7 +95,7 @@
                 font-style: italic;
             }
             form{
-                overflow-y: scroll;
+                overflow-y:scroll;
                 height: 50%;
                 display: grid;
                 grid-template-columns: auto auto;
