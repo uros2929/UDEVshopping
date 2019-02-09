@@ -22,11 +22,20 @@
     <div class="shoesMain">
         <div class="shoesSearch">
             <select name="gender" id="selectGender" (change)="valueFromSelectListGender($event)">
-                <option value="" selected>GENDER</option>
+                <option value="" selected>ALL</option>
                 <option value="men">MEN</option>
                 <option value="women">WOMEN</option>
                 <option value="kids">KIDS</option>
             </select>
+            <div class="shoseBrand">
+                <h4>CHOOSE BRAND :</h4>
+                <form action="?" method="POST" id="chooseBrand" (change)="valueFromFormBrands($event)">
+                    <input type="checkbox" name="brand" id="brand" value="JORDAN"> JORDAN
+                    <input type="checkbox" name="brand" id="brand" value="NIKE"> NIKE
+                    <input type="checkbox" name="brand" id="brand" value="ADIDAS"> ADIDAS
+                    <input type="checkbox" name="brand" id="brand" value="UNDER ARMOUR"> UNDER ARMOUR
+                </form>
+            </div>
             <div class="shoseSize">
                 <h4>CHOOSE SIZE :</h4>
                 <form action="?" method="POST" id="chooseSize"  (change)="valueFromFormSize($event)">
@@ -60,16 +69,8 @@
                     <input type="radio" name="size" id="size" value="46.5">46.5
                 </form>
             </div>
-            <div class="shoseBrand">
-                <h4>CHOOSE BRAND :</h4>
-                <form action="?" method="POST" id="chooseBrand" (change)="valueFromFormBrands($event)">
-                    <input type="checkbox" name="brand" id="brand" value="JORDAN"> JORDAN
-                    <input type="checkbox" name="brand" id="brand" value="NIKE"> NIKE
-                    <input type="checkbox" name="brand" id="brand" value="ADIDAS"> ADIDAS
-                    <input type="checkbox" name="brand" id="brand" value="UNDER ARMOUR"> UNDER ARMOUR
-                </form>
-            </div>
             <button (click)="resetSearch()">RESET</button>
+            <p>If you 100% true search, click reset button, after first search !</p>
         </div>
         <div class="shoesShop" *ngFor="let data of arrayOfCardAll">
             <div  [style.gridArea]="data[0]" class="card">

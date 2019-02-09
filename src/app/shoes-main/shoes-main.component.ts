@@ -106,7 +106,6 @@ export class ShoesMainComponent implements OnInit {
     this.index = 1;
     this.getSizeOfShose(event);
     this.makeArrayForShowSize();
-    this.disableRadioBtns(event,true)  // MUST DO THIS, I NEED TO FIND BUG :/
   }
 
   valueFromFormBrands(event) {
@@ -127,12 +126,10 @@ export class ShoesMainComponent implements OnInit {
 
   returnKeysShowShoesOnStart(index) {
     this.arrayKeysOfCards = Object.keys(this.cardsObj);
-    if (this.choosenForSearchObj.gender[0] == undefined || this.choosenForSearchObj.gender[0] == "") {
       for (const prop of this.arrayKeysOfCards) {
         this.arrayOfCardAll.push([this.cardsObj[prop].class + index, this.cardsObj[prop].img, this.cardsObj[prop].title, this.cardsObj[prop].price, this.cardsObj[prop].gender, this.cardsObj[prop].brand, this.cardsObj[prop].size]);
         index++
       }
-    }
   }
 
   returnKeysShowShoesOnGenderChange(gender) {
@@ -153,9 +150,10 @@ export class ShoesMainComponent implements OnInit {
         this.choosenForSearchObj.size.push(event.target.form[index].value)
       }
     }
-    console.log(this.choosenForSearchObj.size)
   }
+
   makeArrayForShowSize() {
+    this.arrayForShowSize=[];
     for (let index = 0; index < this.arrayOfCardAll.length; index++) {
       if (this.arrayOfCardAll[index][6].includes(this.choosenForSearchObj.size) == true) {
         this.arrayForShowSize.push(this.arrayOfCardAll[index])
@@ -163,17 +161,12 @@ export class ShoesMainComponent implements OnInit {
     }
     for (let index = 0; index < this.arrayForShowSize.length; index++) {
       this.arrayForShowSize[index][0] = "card" + this.index;
-      this.index++
-
+      this.index++;
     }
     this.arrayOfCardAll = this.arrayForShowSize;
   }
-  disableRadioBtns(event,disableValue) {
-    let allFormBtns = event.target.form;
-    for (let index = 0; index < allFormBtns.length; index++) {
-      allFormBtns[index].disabled = disableValue;
-    }
-  }
+  
+
 
   resetSearch(){
     this.arrayKeysOfCards = [];
@@ -185,12 +178,10 @@ export class ShoesMainComponent implements OnInit {
       size: [],
       brands: []
     }
-    console.log(  document.getElementById('chooseSize'))
     this.returnKeysShowShoesOnStart(this.index);
     for (let index = 0; index < 28; index++) {
-      document.getElementById('chooseSize')[index].disabled=false;
-      document.getElementById('chooseSize')[index].checked=false;      // MUST DO THIS, I NEED TO FIND BUG :/
-    }
+      document.getElementById('chooseSize')[index].checked=false; 
+    }    
   }
 }
 
