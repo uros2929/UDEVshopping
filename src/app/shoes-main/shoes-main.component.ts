@@ -130,7 +130,7 @@ export class ShoesMainComponent implements OnInit {
 
   onGenderChange(gender) {
     let valueOfSize = this.choosenForSearchObj.size[0],
-      valueOfBrand = this.choosenForSearchObj.brands[0];
+        valueOfBrand = this.choosenForSearchObj.brands[0];
     this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
     if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
@@ -139,7 +139,14 @@ export class ShoesMainComponent implements OnInit {
           this.index++
         }
       }
-    } else if (this.choosenForSearchObj.brands[0] != undefined) {
+    }else if(this.choosenForSearchObj.brands[0] != undefined && this.choosenForSearchObj.size[0] != undefined){
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == gender && this.cardsObjShoes[prop].size.includes(valueOfSize) && this.cardsObjShoes[prop].brand==valueOfBrand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    }else if (this.choosenForSearchObj.brands[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
         if (this.cardsObjShoes[prop].gender == gender && this.cardsObjShoes[prop].brand == valueOfBrand) {
           this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
@@ -154,11 +161,12 @@ export class ShoesMainComponent implements OnInit {
         }
       }
     }
+    this.noProductInStock()
   }
 
   onBrandChange(brand) {
     let valueOfGender = this.choosenForSearchObj.gender[0],
-      valueOfSize = this.choosenForSearchObj.size[0];
+        valueOfSize = this.choosenForSearchObj.size[0];
     this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
     if (this.choosenForSearchObj.gender[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
@@ -167,7 +175,14 @@ export class ShoesMainComponent implements OnInit {
           this.index++
         }
       }
-    } else if (this.choosenForSearchObj.gender[0] != undefined) {
+    }else if(this.choosenForSearchObj.gender[0] != undefined && this.choosenForSearchObj.size[0] != undefined){
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == valueOfGender && this.cardsObjShoes[prop].size.includes(valueOfSize) && this.cardsObjShoes[prop].brand==brand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    }else if (this.choosenForSearchObj.gender[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
         if (this.cardsObjShoes[prop].brand == brand && this.cardsObjShoes[prop].gender == valueOfGender) {
           this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
@@ -182,11 +197,12 @@ export class ShoesMainComponent implements OnInit {
         }
       }
     }
+    this.noProductInStock()
   }
 
   onSizeChange(size) {
     let valueOfGender = this.choosenForSearchObj.gender[0],
-      valueOfBrand = this.choosenForSearchObj.brands[0];
+        valueOfBrand = this.choosenForSearchObj.brands[0];
     this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
     if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.gender[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
@@ -195,7 +211,14 @@ export class ShoesMainComponent implements OnInit {
           this.index++
         }
       }
-    } else if (this.choosenForSearchObj.brands[0] != undefined) {
+    }else if(this.choosenForSearchObj.brands[0] != undefined && this.choosenForSearchObj.gender[0] != undefined){
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == valueOfGender && this.cardsObjShoes[prop].size.includes(size) && this.cardsObjShoes[prop].brand==valueOfBrand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    }else if (this.choosenForSearchObj.brands[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
         if (this.cardsObjShoes[prop].size.includes(size) == true && this.cardsObjShoes[prop].brand == valueOfBrand) {
           this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
@@ -210,7 +233,18 @@ export class ShoesMainComponent implements OnInit {
         }
       }
     }
+    this.noProductInStock()
   }
+
+
+noProductInStock(){
+let noInStock=document.getElementById('messageNoInStock');
+  if (this.arrayOfCardAll[0]==undefined) {
+    noInStock.style.display='block'
+  }else{
+    noInStock.style.display='none'
+  }
+}
 
   resetSearch() {
     this.arrayKeysOfCards = [];
