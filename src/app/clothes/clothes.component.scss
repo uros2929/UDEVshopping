@@ -66,6 +66,166 @@
         }
     }
 }
+.clothesMain{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "clothesSearch clothesShop";
+    height: 100%;
+    text-align: center;  
+    .clothesSearch{
+        background:linear-gradient(to bottom, rgba(102,102,102,1) 0%,rgba(91,91,91,1) 18%,rgba(121,121,121,1) 31%,rgba(181,181,181,1) 45%,rgba(181,181,181,1) 56%,rgba(255,255,255,1) 73%);
+        display: flex;
+        flex-direction: column;
+        grid-area:clothesSearch; 
+        select{
+            background-color: rgba(107,107,229,1);
+            color: white;
+            margin: 5% auto;
+            position: relative;
+            width: 50%;
+        }
+        .clothesSize{
+            align-content: center;
+            justify-content: center;
+            display: grid;
+            margin: 0 auto;
+            height: 25%;
+            text-align: center;
+            width: 70%;
+            h4{
+                color: white;
+                font-weight: 600;
+                font-style: italic;
+            }
+            form{
+                background-color: rgba(107,107,229,1);
+                color: white;
+                display: grid;
+                font-weight: 600;
+                grid-template-columns: auto auto;
+                height: 100%;
+                overflow-y:auto;
+                text-align: start;
+                width: 100%;
+            }
+        }
+        .clothesSize{
+            align-content: center;
+            justify-content: center;
+            display: grid;
+            margin: 0 auto;
+            height: 25%;
+            text-align: center;
+            width: 70%;
+            h4{
+                color: white;
+                font-weight: 600;
+                font-style: italic;
+            }
+            form{
+                background-color: rgba(107,107,229,1);
+                color: white;
+                display: grid;
+                font-weight: 600;
+                grid-template-columns: auto auto;
+                height: 100%;
+                overflow-y:auto;
+                text-align: start;
+                width: 100%;
+            }
+            
+        }
+        button{
+            background-color: white;
+            border: 2px solid rgba(107,107,229,1);
+            border-radius: 50%;
+            color: rgba(107,107,229,1);
+            cursor: pointer;
+            font-weight: 600;
+            margin: 3% auto;
+            height: 100px;
+            width: 50%;
+        }
+        button:hover{
+            background-color: rgba(107,107,229,1);
+            color: white;
+        }
+        
+    }
+    .clothesBrand{
+        align-content: center;
+        justify-content: center;
+        margin: 3% auto;
+        height: 30%;
+        text-align: center;
+        width: 70%;
+        h4{
+            color: white;
+            font-weight: 600;
+            font-style: italic;
+        }
+        form{
+            background-color: rgba(107,107,229,1);
+            color: white;
+            height: 50%;
+            display: grid;
+            grid-template-columns: auto auto;
+            overflow-y: auto;
+            width: 100%;
+        }
+    }   
+}
+    .clothesShop{
+        display: grid;
+        grid-template-columns: 24% 1% 24% 1% 24% 1% 24%;
+        grid-template-rows: 100% 100% 100% 100% 100%;
+        grid-template-areas: 
+        "card1 . card2 . card3 . card4"
+        "card5 . card6 . card7 . card8"
+        "card9 . card10 . card11 . card12"
+        "card13 . card14 . card15 . card16"
+        "card17 . card18 . card19 . card20";
+        height: 50%;
+        text-align: center;
+        width: 100%;
+        grid-area:clothesShop; 
+        .card{
+            .card-img{
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                height: 50%;
+                width: 50%;
+            }
+            .card-body{
+                height: 40%;
+                .card-title{
+                    font-weight: 700;
+                    height: 40%;
+                }
+                .card-button{
+                   button{
+                       width: 50%;
+                   }
+                }
+            }
+        }
+        .card-button button{
+            background-color: white;
+            border: 2px solid rgba(107,107,229,1);
+            border-radius: 25%;
+            padding: 5px;
+            width: 50%;
+        }
+        .card-button button:hover{
+            background-color: rgba(107,107,229,1);
+            color: white;
+            cursor: pointer;
+        }
+    }
+  
+
 
 
 

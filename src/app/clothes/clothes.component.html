@@ -19,4 +19,44 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="clothesMain">
+        <div class="clothesSearch">
+            <select name="gender" id="selectGender" (change)="valueFromSelectListGender($event)">
+                <option value="all" selected>ALL</option>
+                <option value="men">MEN</option>
+                <option value="women">WOMEN</option>
+                <option value="kids">KIDS</option>
+            </select>
+            <div class="clothesBrand">
+                <h4>CHOOSE BRAND :</h4>
+                <form action="?" method="POST" id="chooseBrand" (change)="valueFromBrands($event)">
+                    <input type="radio" name="brand" id="brand" value="nike"> NIKE
+                    <input type="radio" name="brand" id="brand" value="addidas"> ADDIDAS
+                    <input type="radio" name="brand" id="brand" value="under armour"> UNDER ARMOUR
+                </form>
+            </div>
+            <div class="clothesSize">
+                <h4>CHOOSE SIZE :</h4>
+                <form action="?" method="POST" id="chooseSize" (change)="valueFromSize($event)">
+                    <input type="radio" name="size" id="size" value="XS"> XS
+                    <input type="radio" name="size" id="size" value="S"> S
+                    <input type="radio" name="size" id="size" value="M"> M
+                    <input type="radio" name="size" id="size" value="L"> L
+                    <input type="radio" name="size" id="size" value="XL"> XL
+                    <input type="radio" name="size" id="size" value="XXL"> XXL
+                </form>
+            </div>
+            <button (click)="resetSearch()">RESET</button>
+        </div>
+        <div class="clothesShop">
+            <div class="card" *ngFor="let data of arrayOfCardAll" [style.gridArea]="data[0]">
+                <div class="card-img" [style.backgroundImage]="'url('+data[1]+')'"></div>
+                <div class="card-body">
+                    <div class="card-title">{{data[2]}} <br> {{data[3]}}</div>
+                    <div class="card-button">
+                        <button>ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

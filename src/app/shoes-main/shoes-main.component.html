@@ -29,7 +29,7 @@
             </select>
             <div class="shoseBrand">
                 <h4>CHOOSE BRAND :</h4>
-                <form action="?" method="POST" id="chooseBrand" (change)="valueFromFormBrands($event)">
+                <form action="?" method="POST" id="chooseBrand" (change)="valueFromBrands($event)">
                     <input type="radio" name="brand" id="brand" value="jordan"> JORDAN
                     <input type="radio" name="brand" id="brand" value="nike"> NIKE
                     <input type="radio" name="brand" id="brand" value="addidas"> ADDIDAS
@@ -38,7 +38,7 @@
             </div>
             <div class="shoseSize">
                 <h4>CHOOSE SIZE :</h4>
-                <form action="?" method="POST" id="chooseSize"  (change)="valueFromFormSize($event)">
+                <form action="?" method="POST" id="chooseSize" (change)="valueFromSize($event)">
                     <input type="radio" name="size" id="size" value="30"> 30
                     <input type="radio" name="size" id="size" value="31"> 31
                     <input type="radio" name="size" id="size" value="32"> 32
@@ -72,9 +72,9 @@
             <button (click)="resetSearch()">RESET</button>
             <p>If you 100% true search, click reset button, after first search !</p>
         </div>
-        <div class="shoesShop" >
+        <div class="shoesShop">
             <div *ngFor="let data of arrayOfCardAll" [style.gridArea]="data[0]" class="card">
-                <div class="card-img" [style.backgroundImage]="'url('+ data[1] +')'"></div>                                             
+                <div class="card-img" [style.backgroundImage]="'url('+ data[1] +')'"></div>
                 <div class="card-body">
                     <div class="card-title">{{data[2]}} <br> {{data[3]}}</div>
                     <div class="card-button">
@@ -83,3 +83,4 @@
                 </div>
             </div>
         </div>
+    </div>

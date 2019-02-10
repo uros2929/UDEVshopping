@@ -11,7 +11,7 @@ export class ShoesMainComponent implements OnInit {
 
 
 
-  cardsObj = {
+  cardsObjShoes = {
     card1: {
       class: "card",
       img: './assets/shoesAssets/Nike-Air-Max-97.jpg ',
@@ -86,37 +86,34 @@ export class ShoesMainComponent implements OnInit {
   }
 
   valueFromSelectListGender(event) {
+    let valueOfSelectList = event.target.value;
     this.choosenForSearchObj.gender = [];
     this.index = 1;
     this.arrayOfCardAll = [];
-    this.choosenForSearchObj.gender.push(event.target.value);
-    if (this.choosenForSearchObj.gender[0] == "men") {
-      this.returnKeysShowShoesOnGenderChange('men');
-      this.resetForms();
-    } else if (this.choosenForSearchObj.gender[0] == "women") {
-      this.returnKeysShowShoesOnGenderChange('women');
-      this.resetForms();
-    } else if (this.choosenForSearchObj.gender[0] == "kids") {
-      this.returnKeysShowShoesOnGenderChange('kids');
-      this.resetForms();
-    } else if (this.choosenForSearchObj.gender[0] == "") {
+    this.choosenForSearchObj.gender.push(valueOfSelectList);
+    if (this.choosenForSearchObj.gender[0] == "") {
       this.returnKeysShowShoesOnStart(this.index);
-      this.resetForms();
+    } else {
+      this.onGenderChange(valueOfSelectList);
     }
-
-
   }
-  valueFromFormSize(event) {
+  valueFromBrands(event) {
+    let valueOfBrand = event.target.value;
+    this.choosenForSearchObj.brands = [];
     this.index = 1;
-    this.getSizeOfShose(event);
-    this.makeArrayForShowSize();
+    this.arrayOfCardAll = [];
+    this.choosenForSearchObj.brands.push(valueOfBrand)
+    this.onBrandChange(valueOfBrand)
+  }
+  valueFromSize(event) {
+    let valueOfSize = event.target.value;
+    this.choosenForSearchObj.size = [];
+    this.index = 1;
+    this.arrayOfCardAll = [];
+    this.choosenForSearchObj.size.push(valueOfSize)
+    this.onSizeChange(valueOfSize)
   }
 
-  valueFromFormBrands(event) {
-    this.index = 1;
-    this.getBrandName(event);
-    this.makeArrayForBrand();
-  }
 
 
 
@@ -124,73 +121,96 @@ export class ShoesMainComponent implements OnInit {
 
 
   returnKeysShowShoesOnStart(index) {
-    this.arrayKeysOfCards = Object.keys(this.cardsObj);
+    this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
     for (const prop of this.arrayKeysOfCards) {
-      this.arrayOfCardAll.push([this.cardsObj[prop].class + index, this.cardsObj[prop].img, this.cardsObj[prop].title, this.cardsObj[prop].price, this.cardsObj[prop].gender, this.cardsObj[prop].brand, this.cardsObj[prop].size]);
+      this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
       index++
     }
   }
 
-  returnKeysShowShoesOnGenderChange(gender) {
-    this.arrayKeysOfCards = Object.keys(this.cardsObj);
-    for (const prop of this.arrayKeysOfCards) {
-      if (this.cardsObj[prop].gender == gender) {
-        this.arrayOfCardAll.push([this.cardsObj[prop].class + this.index, this.cardsObj[prop].img, this.cardsObj[prop].title, this.cardsObj[prop].price, this.cardsObj[prop].gender, this.cardsObj[prop].brand, this.cardsObj[prop].size]);
-        this.index++;
+  onGenderChange(gender) {
+    let valueOfSize = this.choosenForSearchObj.size[0],
+      valueOfBrand = this.choosenForSearchObj.brands[0];
+    this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
+    if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == gender) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
       }
-
-    }
-  }
-
-  getBrandName(event) {
-    this.choosenForSearchObj.brands = []
-    for (let index = 0; index < event.target.form.length; index++) {
-      if (event.target.form[index].checked == true) {
-        this.choosenForSearchObj.brands.push(event.target.form[index].value)
-
+    } else if (this.choosenForSearchObj.brands[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == gender && this.cardsObjShoes[prop].brand == valueOfBrand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
       }
-    }
-  }
-
-  makeArrayForBrand() {
-    this.arrayForShowBrands = [];
-    for (let index = 0; index < this.arrayOfCardAll.length; index++) {
-      if (this.arrayOfCardAll[index][5].includes(this.choosenForSearchObj.brands) == true) {
-        this.arrayForShowBrands.push(this.arrayOfCardAll[index])
-      }
-
-    }
-    for (let index = 0; index < this.arrayForShowBrands.length; index++) {
-      this.arrayForShowBrands[index][0] = "card" + this.index;
-      this.index++;
-    }
-    this.arrayOfCardAll = this.arrayForShowBrands;
-  }
-
-  getSizeOfShose(event) {
-    this.choosenForSearchObj.size = [];
-    for (let index = 0; index < event.target.form.length; index++) {
-      if (event.target.form[index].checked == true) {
-        this.choosenForSearchObj.size.push(event.target.form[index].value)
+    } else if (this.choosenForSearchObj.size[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].gender == gender && this.cardsObjShoes[prop].size.includes(valueOfSize)) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
       }
     }
   }
 
-  makeArrayForShowSize() {
-    this.arrayForShowSize = [];
-    for (let index = 0; index < this.arrayOfCardAll.length; index++) {
-      if (this.arrayOfCardAll[index][6].includes(this.choosenForSearchObj.size) == true) {
-        this.arrayForShowSize.push(this.arrayOfCardAll[index])
+  onBrandChange(brand) {
+    let valueOfGender = this.choosenForSearchObj.gender[0],
+      valueOfSize = this.choosenForSearchObj.size[0];
+    this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
+    if (this.choosenForSearchObj.gender[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].brand == brand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    } else if (this.choosenForSearchObj.gender[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].brand == brand && this.cardsObjShoes[prop].gender == valueOfGender) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    } else if (this.choosenForSearchObj.size[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].brand == brand && this.cardsObjShoes[prop].size.includes(valueOfSize)) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
       }
     }
-    for (let index = 0; index < this.arrayForShowSize.length; index++) {
-      this.arrayForShowSize[index][0] = "card" + this.index;
-      this.index++;
-    }
-    this.arrayOfCardAll = this.arrayForShowSize;
   }
 
-
+  onSizeChange(size) {
+    let valueOfGender = this.choosenForSearchObj.gender[0],
+      valueOfBrand = this.choosenForSearchObj.brands[0];
+    this.arrayKeysOfCards = Object.keys(this.cardsObjShoes);
+    if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.gender[0] == undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].size.includes(size) == true) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    } else if (this.choosenForSearchObj.brands[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].size.includes(size) == true && this.cardsObjShoes[prop].brand == valueOfBrand) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    } else if (this.choosenForSearchObj.gender[0] != undefined) {
+      for (const prop of this.arrayKeysOfCards) {
+        if (this.cardsObjShoes[prop].size.includes(size) == true && this.cardsObjShoes[prop].gender == valueOfGender) {
+          this.arrayOfCardAll.push([this.cardsObjShoes[prop].class + this.index, this.cardsObjShoes[prop].img, this.cardsObjShoes[prop].title, this.cardsObjShoes[prop].price, this.cardsObjShoes[prop].gender, this.cardsObjShoes[prop].brand, this.cardsObjShoes[prop].size]);
+          this.index++
+        }
+      }
+    }
+  }
 
   resetSearch() {
     this.arrayKeysOfCards = [];
