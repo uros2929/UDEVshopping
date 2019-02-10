@@ -38,29 +38,29 @@ export class ClothesComponent implements OnInit {
     },
     card4: {
       class: "card",
-      img: './assets/clothesAssets/addidas-men1.jpg',
-      title: "ADDIDAS MEN",
+      img: './assets/clothesAssets/adidas-men1.jpg',
+      title: "ADIDAS MEN",
       price: "50$",
       gender: "men",
-      brand: 'addidas',
+      brand: 'adidas',
       size: 'M,L,XL'
     },
     card5: {
       class: "card",
-      img: './assets/clothesAssets/addidas-men2.jpg',
-      title: "ADDIDAS MEN",
+      img: './assets/clothesAssets/adidas-men2.jpg',
+      title: "ADIDAS MEN",
       price: "60$",
       gender: "men",
-      brand: 'addidas',
+      brand: 'adidas',
       size: 'M,L,XL'
     },
     card6: {
       class: "card",
-      img: './assets/clothesAssets/addidas-men3.jpg',
-      title: "ADDIDAS MEN",
+      img: './assets/clothesAssets/adidas-men3.jpg',
+      title: "ADIDAS MEN",
       price: "50$",
       gender: "men",
-      brand: 'addidas',
+      brand: 'adidas',
       size: 'S,M,L,XL'
     },
     card7: {

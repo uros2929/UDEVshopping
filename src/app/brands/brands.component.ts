@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandsComponent implements OnInit {
 
+  
   constructor() { }
 
+  arrayForNike=[];
   ngOnInit() {
   }
+
+
+  showNikeProducts(event){
+  
+  }
+  showJordanProducts(event){
+
+  }
+  showAdidasProducts(event){
+
+  }
+  showUnderAProducts(event){
+
+  }
+
 
 }

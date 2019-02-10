@@ -3,6 +3,61 @@
     height: 100%;
 }
 
+.shopHeader{
+    height: 100%;
+    .brandsLogo{
+        background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
+        display: grid;
+        grid-template-columns: 4% 20% 4% 20% 4% 20% 4% 20% 4%;
+        grid-template-areas: 
+        ". nikeLogo . jordanLogo . adidasLogo . underALogo .";
+        margin-top: 1%;
+        height: 25%;
+        .nikeLogo{
+            background-image: url('../../assets/brandsAssets/nike-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            grid-area: nikeLogo;
+            justify-self: center;
+            width: 80%;
+          
+           
+        }
+        .jordanLogo{
+            background-image: url('../../assets/brandsAssets/jordan-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            grid-area: jordanLogo; 
+            justify-self: center;
+            width: 80%;
+        }
+        .adidasLogo{
+            background-image: url('../../assets/brandsAssets/adidas-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            grid-area: adidasLogo; 
+            justify-self: center; 
+            width: 80%; 
+        }
+        .underALogo{
+            background-image: url('../../assets/brandsAssets/underA-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            grid-area: underALogo;  
+            justify-self: center; 
+            width: 80%;
+        }
+    }
+}
+
 .logo{
     align-content: center;
     display: grid;
@@ -70,6 +125,7 @@
 
 
 
+
 @keyframes brandsStart{
     0%{
         opacity: 0;
@@ -78,3 +134,4 @@
         opacity: 1;
     }
 }
+

@@ -42,10 +42,10 @@ export class ShoesMainComponent implements OnInit {
     card4: {
       class: "card",
       img: './assets/shoesAssets/Adidas_EQT-support-ADV_Black_Turbo_Red-1.jpg',
-      title: "ADDIDAS EQT",
+      title: "ADIDAS EQT",
       price: "125$",
       gender: "men",
-      brand: "addidas",
+      brand: "adidas",
       size: '43,45,45.5,46'
     },
     card5: {
