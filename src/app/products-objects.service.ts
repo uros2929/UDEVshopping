@@ -170,8 +170,186 @@ export class ProductsObjectsService {
       brand: 'nike',
       size: 'XS,S,M'
     }
+  }
 
-
+  cardObjAccessories={
+    card1:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-bag1.jpg',
+      title: "ADIDAS BAG",
+      price: "35$",
+      brand: 'adidas',
+      accessories: 'bag'
+    },
+    card2:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-bag2.jpg',
+      title: "ADIDAS BAG",
+      price: "30$",
+      brand: 'adidas',
+      accessories: 'bag'
+    },
+    card4:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-cap1.jpg',
+      title: "ADIDAS CAP",
+      price: "25$",
+      brand: 'adidas',
+      accessories: 'cap'
+    },
+    card5:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-cap2.jpg',
+      title: "ADIDAS CAP",
+      price: "20$",
+      brand: 'adidas',
+      accessories: 'cap'
+    },
+    card6:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-socks1.jpg',
+      title: "ADIDAS SOCKS",
+      price: "13$",
+      brand: 'adidas',
+      accessories: 'socks'
+    },
+    card7:{
+      class: "card",
+      img: './assets/accessoriesAssets/adidas-socks2.jpg',
+      title: "ADIDAS SOCKS",
+      price: "13$",
+      brand: 'adidas',
+      accessories: 'socks'
+    },
+    card8:{
+      class: "card",
+      img: './assets/accessoriesAssets/jordan-socks3.jpg',
+      title: "JORDAN SOCKS",
+      price: "15$",
+      brand: 'jordan',
+      accessories: 'socks'
+    },
+    card9:{
+      class: "card",
+      img: './assets/accessoriesAssets/jordan-cap1.jpg',
+      title: "JORDAN SOCKS",
+      price: "12$",
+      brand: 'jordan',
+      accessories: 'cap'
+    },
+    card10:{
+      class: "card",
+      img: './assets/accessoriesAssets/jordan-socks1.jpg',
+      title: "JORDAN SOCKS",
+      price: "15$",
+      brand: 'jordan',
+      accessories: 'socks'
+    },
+    card11:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-bag1.jpg',
+      title: "NIKE BAG",
+      price: "35$",
+      brand: 'nike',
+      accessories: 'bag'
+    },
+    card12:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-bag2.jpg',
+      title: "NIKE BAG",
+      price: "30$",
+      brand: 'nike',
+      accessories: 'bag'
+    },
+    card13:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-cap1.jpg',
+      title: "NIKE CAP",
+      price: "20$",
+      brand: 'nike',
+      accessories: 'cap'
+     
+    },
+    card14:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-cap2.jpg',
+      title: "NIKE CAP",
+      price: "20$",
+      brand: 'nike',
+      accessories: 'cap'
+    },
+    card15:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-cap3.jpg',
+      title: "NIKE CAP",
+      price: "25$",
+      brand: 'nike',
+      accessories: 'cap'
+    },
+    card16:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-socks1.jpg',
+      title: "NIKE SOCKS",
+      price: "12$",
+      brand: 'nike',
+      accessories: 'socks'
+    },
+    card17:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-socks2.jpg',
+      title: "NIKE SOCKS",
+      price: "14$",
+      brand: 'nike',
+      accessories: 'socks'
+    },
+    card18:{
+      class: "card",
+      img: './assets/accessoriesAssets/nike-socks3.jpg',
+      title: "NIKE SOCKS",
+      price: "15$",
+      brand: 'nike',
+      accessories: 'socks'
+    },
+    card19:{
+      class: "card",
+      img: './assets/accessoriesAssets/underA-bag1.jpg',
+      title: "UNDER ARMOUR BAG",
+      price: "29$",
+      brand: 'under armour',
+      accessories: 'bag'
+    },
+    card20:{
+      class: "card",
+      img: './assets/accessoriesAssets/underA-bag2.jpg',
+      title: "UNDER ARMOUR BAG",
+      price: "27$",
+      brand: 'under armour',
+      accessories: 'bag'
+    },
+    card21:{
+      class: "card",
+      img: './assets/accessoriesAssets/underA-socks1.jpg',
+      title: "UNDER ARMOUR SOCKS",
+      price: "15$",
+      brand: 'under armour',
+      accessories: 'socks'
+    },
+    card22:{
+      class: "card",
+      img: './assets/accessoriesAssets/underA-socks2.jpg',
+      title: "UNDER ARMOUR SOCKS",
+      price: "11$",
+      brand: 'under armour',
+      accessories: 'socks'
+    },
+    card23:{
+      class: "card",
+      img: './assets/accessoriesAssets/jordan-socks2.jpg',
+      title: "JORDAN SOCKS",
+      price: "15$",
+      brand: 'jordan',
+      accessories: 'socks'
+    },
   }
 
   constructor() { }
