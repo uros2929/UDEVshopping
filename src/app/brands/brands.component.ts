@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsObjectsService } from '../products-objects.service';
 
 @Component({
   selector: 'app-brands',
@@ -8,24 +9,90 @@ import { Component, OnInit } from '@angular/core';
 export class BrandsComponent implements OnInit {
 
   
-  constructor() { }
+  constructor(private productsObjects:ProductsObjectsService) { }
 
-  arrayForNike=[];
+  objOfShoes=this.productsObjects.cardsObjShoes;
+  objOfClothes=this.productsObjects.cardObjClothes;
+
+  index=1;
+  arrayForClickedBrand=[];
+  keysOfObjProductsShoes=[];
+  keysOfObjProductsClothes=[];
+  arrayForBrand=[];
+
   ngOnInit() {
+    console.log(this.arrayForBrand)
   }
 
 
-  showNikeProducts(event){
-  
+  showNikeProducts(){
+  this.arrayForClickedBrand=[];
+  this.arrayForBrand=[];
+  this.arrayForClickedBrand.push('nike');
+  this.keysOfObjProductsShoes=Object.keys(this.objOfShoes);
+  this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
+  for (const prop of this.keysOfObjProductsShoes) {
+    if(this.objOfShoes[prop].brand == 'nike'){
+      this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+    }
   }
-  showJordanProducts(event){
-
+  for (const prop of this.keysOfObjProductsClothes) {
+    if(this.objOfClothes[prop].brand == 'nike'){
+      this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+    }
   }
-  showAdidasProducts(event){
-
+  console.log(this.arrayForBrand)
   }
-  showUnderAProducts(event){
-
+  showJordanProducts(){
+    this.arrayForClickedBrand=[];
+    this.arrayForBrand=[];
+    this.arrayForClickedBrand.push('jordan');
+    this.keysOfObjProductsShoes=Object.keys(this.objOfShoes);
+    this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
+    for (const prop of this.keysOfObjProductsShoes) {
+      if(this.objOfShoes[prop].brand == 'jordan'){
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+      }
+    }
+    for (const prop of this.keysOfObjProductsClothes) {
+      if(this.objOfClothes[prop].brand == 'jordan'){
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+      }
+    }
+  }
+  showAdidasProducts(){
+    this.arrayForClickedBrand=[];
+    this.arrayForBrand=[];
+    this.arrayForClickedBrand.push('adidas');
+    this.keysOfObjProductsShoes=Object.keys(this.objOfShoes);
+    this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
+    for (const prop of this.keysOfObjProductsShoes) {
+      if(this.objOfShoes[prop].brand == 'adidas'){
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+      }
+    }
+    for (const prop of this.keysOfObjProductsClothes) {
+      if(this.objOfClothes[prop].brand == 'adidas'){
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+      }
+    }
+  }
+  showUnderAProducts(){
+    this.arrayForClickedBrand=[];
+    this.arrayForBrand=[];
+    this.arrayForClickedBrand.push('under armour');
+    this.keysOfObjProductsShoes=Object.keys(this.objOfShoes);
+    this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
+    for (const prop of this.keysOfObjProductsShoes) {
+      if(this.objOfShoes[prop].brand == 'under armour'){
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+      }
+    }
+    for (const prop of this.keysOfObjProductsClothes) {
+      if(this.objOfClothes[prop].brand == 'under armour'){
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+      }
+    }
   }
 
 

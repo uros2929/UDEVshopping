@@ -19,10 +19,21 @@
             </div>
         </div>
         <div class="brandsLogo">
-            <div class="nikeLogo" (click)="showNikeProducts($event)"></div>
-            <div class="jordanLogo" (click)="showJordanProducts($event)"></div>
-            <div class="adidasLogo" (click)="showAdidasProducts($event)"></div>
-            <div class="underALogo" (click)="showUnderAProducts($event)"></div>
+            <div class="nikeLogo" (click)="showNikeProducts()"></div>
+            <div class="jordanLogo" (click)="showJordanProducts()"></div>
+            <div class="adidasLogo" (click)="showAdidasProducts()"></div>
+            <div class="underALogo" (click)="showUnderAProducts()"></div>
+        </div>
+    </div>
+    <div class="brandsMain">
+        <div *ngFor="let data of arrayForBrand" class="{{data[0]}}">
+            <div class="card-img" [style.backgroundImage]="'url('+data[1]+')'"></div>
+            <div class="card-body">
+                <div class="card-title">{{data[2]}} <br> {{data[3]}}</div>
+                <div class="card-button">
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
