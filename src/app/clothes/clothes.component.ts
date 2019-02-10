@@ -189,6 +189,7 @@ export class ClothesComponent implements OnInit {
     }
     this.returnKeysShowClothesOnStart(this.index);
     this.resetForms();
+    document.getElementById('messageNoInStock').style.display='none';
   }
   resetForms() {
     let formBrandLenght = document.getElementsByTagName('form')[0].length,

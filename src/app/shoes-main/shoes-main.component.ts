@@ -204,6 +204,7 @@ let noInStock=document.getElementById('messageNoInStock');
     }
     this.returnKeysShowShoesOnStart(this.index);
     this.resetForms();
+    document.getElementById('messageNoInStock').style.display='none';
   }
   resetForms() {
     let formBrandLenght = document.getElementsByTagName('form')[0].length,
