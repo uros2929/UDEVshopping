@@ -202,5 +202,8 @@ export class ClothesComponent implements OnInit {
     }
 
   }
+  addProductInCart(event) {
+    this.clothesObj.addProductsInLocalStorage(event)
+  }
 
 }

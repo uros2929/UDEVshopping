@@ -65,7 +65,7 @@ export class ProductsObjectsService {
     card1: {
       class: "card",
       img: './assets/clothesAssets/nike-men1.jpg',
-      title: "NIKE MEN",
+      title: "NIKE MEN 1",
       price: "80$",
       gender: "men",
       brand: 'nike',
@@ -74,7 +74,7 @@ export class ProductsObjectsService {
     card2: {
       class: "card",
       img: './assets/clothesAssets/nike-men2.jpg',
-      title: "NIKE MEN",
+      title: "NIKE MEN 2",
       price: "90$",
       gender: "men",
       brand: 'nike',
@@ -83,7 +83,7 @@ export class ProductsObjectsService {
     card3: {
       class: "card",
       img: './assets/clothesAssets/nike-men3.jpg',
-      title: "NIKE MEN",
+      title: "NIKE MEN 3",
       price: "100$",
       gender: "men",
       brand: 'nike',
@@ -92,7 +92,7 @@ export class ProductsObjectsService {
     card4: {
       class: "card",
       img: './assets/clothesAssets/adidas-men1.jpg',
-      title: "ADIDAS MEN",
+      title: "ADIDAS MEN 1",
       price: "50$",
       gender: "men",
       brand: 'adidas',
@@ -101,7 +101,7 @@ export class ProductsObjectsService {
     card5: {
       class: "card",
       img: './assets/clothesAssets/adidas-men2.jpg',
-      title: "ADIDAS MEN",
+      title: "ADIDAS MEN 2",
       price: "60$",
       gender: "men",
       brand: 'adidas',
@@ -110,7 +110,7 @@ export class ProductsObjectsService {
     card6: {
       class: "card",
       img: './assets/clothesAssets/adidas-men3.jpg',
-      title: "ADIDAS MEN",
+      title: "ADIDAS MEN 3",
       price: "50$",
       gender: "men",
       brand: 'adidas',
@@ -119,7 +119,7 @@ export class ProductsObjectsService {
     card7: {
       class: "card",
       img: './assets/clothesAssets/underA-men1.jpg',
-      title: "UNDER ARMOUR MEN",
+      title: "UNDER ARMOUR MEN 1",
       price: "50$",
       gender: "men",
       brand: 'under armour',
@@ -128,7 +128,7 @@ export class ProductsObjectsService {
     card8: {
       class: "card",
       img: './assets/clothesAssets/underA-men2.jpg',
-      title: "UNDER ARMOUR MEN",
+      title: "UNDER ARMOUR MEN 2",
       price: "40$",
       gender: "men",
       brand: 'under armour',
@@ -137,7 +137,7 @@ export class ProductsObjectsService {
     card9: {
       class: "card",
       img: './assets/clothesAssets/underA-women1.jpg',
-      title: "UNDER ARMOUR WOMEN",
+      title: "UNDER ARMOUR WOMEN 1",
       price: "40$",
       gender: "women",
       brand: 'under armour',
@@ -146,7 +146,7 @@ export class ProductsObjectsService {
     card10: {
       class: "card",
       img: './assets/clothesAssets/underA-women2.jpg',
-      title: "UNDER ARMOUR WOMEN",
+      title: "UNDER ARMOUR WOMEN 2",
       price: "70$",
       gender: "women",
       brand: 'under armour',
@@ -155,7 +155,7 @@ export class ProductsObjectsService {
     card11: {
       class: "card",
       img: './assets/clothesAssets/underA-women3.jpg',
-      title: "UNDER ARMOUR WOMEN",
+      title: "UNDER ARMOUR WOMEN 3",
       price: "65$",
       gender: "women",
       brand: 'under armour',
@@ -164,7 +164,7 @@ export class ProductsObjectsService {
     card12: {
       class: "card",
       img: './assets/clothesAssets/nike-kids1.jpg',
-      title: "NIKE KIDS",
+      title: "NIKE KIDS 1",
       price: "35$",
       gender: "kids",
       brand: 'nike',
@@ -172,185 +172,201 @@ export class ProductsObjectsService {
     }
   }
 
-  cardObjAccessories={
-    card1:{
+  cardObjAccessories = {
+    card1: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-bag1.jpg',
-      title: "ADIDAS BAG",
+      title: "ADIDAS BAG 1",
       price: "35$",
       brand: 'adidas',
       accessories: 'bag'
     },
-    card2:{
+    card2: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-bag2.jpg',
-      title: "ADIDAS BAG",
+      title: "ADIDAS BAG 2",
       price: "30$",
       brand: 'adidas',
       accessories: 'bag'
     },
-    card4:{
+    card4: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-cap1.jpg',
-      title: "ADIDAS CAP",
+      title: "ADIDAS CAP 1",
       price: "25$",
       brand: 'adidas',
       accessories: 'cap'
     },
-    card5:{
+    card5: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-cap2.jpg',
-      title: "ADIDAS CAP",
+      title: "ADIDAS CAP 2",
       price: "20$",
       brand: 'adidas',
       accessories: 'cap'
     },
-    card6:{
+    card6: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-socks1.jpg',
-      title: "ADIDAS SOCKS",
+      title: "ADIDAS SOCKS 1",
       price: "13$",
       brand: 'adidas',
       accessories: 'socks'
     },
-    card7:{
+    card7: {
       class: "card",
       img: './assets/accessoriesAssets/adidas-socks2.jpg',
-      title: "ADIDAS SOCKS",
+      title: "ADIDAS SOCKS 2",
       price: "13$",
       brand: 'adidas',
       accessories: 'socks'
     },
-    card8:{
+    card8: {
       class: "card",
       img: './assets/accessoriesAssets/jordan-socks3.jpg',
-      title: "JORDAN SOCKS",
+      title: "JORDAN SOCKS 1",
       price: "15$",
       brand: 'jordan',
       accessories: 'socks'
     },
-    card9:{
+    card9: {
       class: "card",
       img: './assets/accessoriesAssets/jordan-cap1.jpg',
-      title: "JORDAN SOCKS",
+      title: "JORDAN SOCKS 2",
       price: "12$",
       brand: 'jordan',
       accessories: 'cap'
     },
-    card10:{
+    card10: {
       class: "card",
       img: './assets/accessoriesAssets/jordan-socks1.jpg',
-      title: "JORDAN SOCKS",
+      title: "JORDAN SOCKS 3",
       price: "15$",
       brand: 'jordan',
       accessories: 'socks'
     },
-    card11:{
+    card11: {
       class: "card",
       img: './assets/accessoriesAssets/nike-bag1.jpg',
-      title: "NIKE BAG",
+      title: "NIKE BAG 1",
       price: "35$",
       brand: 'nike',
       accessories: 'bag'
     },
-    card12:{
+    card12: {
       class: "card",
       img: './assets/accessoriesAssets/nike-bag2.jpg',
-      title: "NIKE BAG",
+      title: "NIKE BAG 2",
       price: "30$",
       brand: 'nike',
       accessories: 'bag'
     },
-    card13:{
+    card13: {
       class: "card",
       img: './assets/accessoriesAssets/nike-cap1.jpg',
-      title: "NIKE CAP",
+      title: "NIKE CAP 1",
       price: "20$",
       brand: 'nike',
       accessories: 'cap'
-     
+
     },
-    card14:{
+    card14: {
       class: "card",
       img: './assets/accessoriesAssets/nike-cap2.jpg',
-      title: "NIKE CAP",
+      title: "NIKE CAP 1",
       price: "20$",
       brand: 'nike',
       accessories: 'cap'
     },
-    card15:{
+    card15: {
       class: "card",
       img: './assets/accessoriesAssets/nike-cap3.jpg',
-      title: "NIKE CAP",
+      title: "NIKE CAP 3",
       price: "25$",
       brand: 'nike',
       accessories: 'cap'
     },
-    card16:{
+    card16: {
       class: "card",
       img: './assets/accessoriesAssets/nike-socks1.jpg',
-      title: "NIKE SOCKS",
+      title: "NIKE SOCKS 1",
       price: "12$",
       brand: 'nike',
       accessories: 'socks'
     },
-    card17:{
+    card17: {
       class: "card",
       img: './assets/accessoriesAssets/nike-socks2.jpg',
-      title: "NIKE SOCKS",
+      title: "NIKE SOCKS 2",
       price: "14$",
       brand: 'nike',
       accessories: 'socks'
     },
-    card18:{
+    card18: {
       class: "card",
       img: './assets/accessoriesAssets/nike-socks3.jpg',
-      title: "NIKE SOCKS",
+      title: "NIKE SOCKS 3",
       price: "15$",
       brand: 'nike',
       accessories: 'socks'
     },
-    card19:{
+    card19: {
       class: "card",
       img: './assets/accessoriesAssets/underA-bag1.jpg',
-      title: "UNDER ARMOUR BAG",
+      title: "UNDER ARMOUR BAG 1",
       price: "29$",
       brand: 'under armour',
       accessories: 'bag'
     },
-    card20:{
+    card20: {
       class: "card",
       img: './assets/accessoriesAssets/underA-bag2.jpg',
-      title: "UNDER ARMOUR BAG",
+      title: "UNDER ARMOUR BAG 2",
       price: "27$",
       brand: 'under armour',
       accessories: 'bag'
     },
-    card21:{
+    card21: {
       class: "card",
       img: './assets/accessoriesAssets/underA-socks1.jpg',
-      title: "UNDER ARMOUR SOCKS",
+      title: "UNDER ARMOUR SOCKS 1",
       price: "15$",
       brand: 'under armour',
       accessories: 'socks'
     },
-    card22:{
+    card22: {
       class: "card",
       img: './assets/accessoriesAssets/underA-socks2.jpg',
-      title: "UNDER ARMOUR SOCKS",
+      title: "UNDER ARMOUR SOCKS 2",
       price: "11$",
       brand: 'under armour',
       accessories: 'socks'
     },
-    card23:{
+    card23: {
       class: "card",
       img: './assets/accessoriesAssets/jordan-socks2.jpg',
-      title: "JORDAN SOCKS",
+      title: "JORDAN SOCKS 4",
       price: "15$",
       brand: 'jordan',
       accessories: 'socks'
     },
   }
 
+  getProductsFromLocal = localStorage.getItem('productsInCart') !== null ? JSON.parse(localStorage.getItem('productsInCart')) : {};
+
   constructor() { }
+
+  addProductsInLocalStorage(event) {
+    let getProductNameAndPrice = event.target.offsetParent.textContent.slice(0, -11),
+      arrayForNameAndPrice = [];
+    arrayForNameAndPrice.push(getProductNameAndPrice);
+    let productForMainArray = arrayForNameAndPrice.join('').split('USD ');
+    console.log(productForMainArray)
+    this.getProductsFromLocal[productForMainArray[0]] = {
+      productsName: productForMainArray[0],
+      productPrice: productForMainArray[1]
+    };
+    localStorage.setItem('productsInCart', JSON.stringify(this.getProductsFromLocal))
+  }
+
 }

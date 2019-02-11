@@ -117,6 +117,7 @@ export class BrandsComponent implements OnInit {
       }
     }
   }
-
-
+  addProductInCart(event) {
+    this.productsObjects.addProductsInLocalStorage(event)
+  }
 }

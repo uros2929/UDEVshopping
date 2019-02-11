@@ -65,6 +65,29 @@
         }
     }
 }
+.basketHeader{
+    text-align: center;
+    h2{
+        font-weight: 600;
+        font-style: italic;
+    } 
+}
+.basketMain{
+
+    .basketTable{
+        width: 100%;
+        tr{
+            border: 1px solid black;
+            td{
+                border: 1px solid black;
+                text-align: center;
+                em{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
 
 
 

@@ -53,4 +53,7 @@ showSocks(){
     }
   }
 }
+addProductInCart(event) {
+  this.objOfAccessories.addProductsInLocalStorage(event)
+}
 }
