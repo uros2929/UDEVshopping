@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsObjectsService } from '../products-objects.service';
 
 @Component({
   selector: 'app-sales',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private products:ProductsObjectsService) { }
+
+  numOfProdInCart=this.products.getNumOfProductsInCart;
 
   ngOnInit() {
+    this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
 }

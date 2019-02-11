@@ -78,14 +78,44 @@
         width: 100%;
         tr{
             border: 1px solid black;
-            td{
-                border: 1px solid black;
+            th{
+                border: 3px solid black;
                 text-align: center;
+            }
+            
+            td{
+                text-align: center;
+                border: 1px solid black;
                 em{
                     cursor: pointer;
                 }
             }
         }
+    }
+}
+.productNameAndImg{
+text-align: end;
+width: 50%;
+    .productInfo{
+        align-content: center;
+        display: grid;
+        float: right;
+        height: 250px;
+        position: relative;
+        text-align: center;
+        width: 50%;
+      h3{
+         font-weight: 600;
+         font-style: italic;
+      }
+    }
+    .productImg{
+        background-size: contain;
+        background-repeat: no-repeat;
+        float: left;
+        height: 250px;
+        position: relative;
+        width: 50%;
     }
 }
 

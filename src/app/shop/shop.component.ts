@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsObjectsService } from '../products-objects.service';
 
 @Component({
   selector: 'app-shop',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopComponent implements OnInit {
 
+ 
+
+  constructor(private products:ProductsObjectsService) { }
+
   marketing1Array = ['nike-air-max-720-aurora-boreal-AO2924-001.jpg', 'kickz_reebok_DMX_series1600.jpg', 'giles_angel_nike_shoe(pp_w1400_h1063).jpg'];
   marketing2Array = ['kickz_deva_state_quadrate.jpg'];
   marketing3Array = ['bhm-collage.jpg'];
   marketing4Array = ['air-jordan-12-retro-black-pink-12.jpg']
 
-  constructor() { }
+  numOfProdInCart=this.products.getNumOfProductsInCart;
 
   ngOnInit() {
     this.changeImgForMarketing1();

@@ -353,18 +353,19 @@ export class ProductsObjectsService {
   }
 
   getProductsFromLocal = localStorage.getItem('productsInCart') !== null ? JSON.parse(localStorage.getItem('productsInCart')) : {};
-
+  getNumOfProductsInCart=Object.keys(this.getProductsFromLocal).length;
   constructor() { }
 
   addProductsInLocalStorage(event) {
     let getProductNameAndPrice = event.target.offsetParent.textContent.slice(0, -11),
+        getImgOfProduct=event.target.offsetParent.children[0].attributes[2].value,
       arrayForNameAndPrice = [];
     arrayForNameAndPrice.push(getProductNameAndPrice);
     let productForMainArray = arrayForNameAndPrice.join('').split('USD ');
-    console.log(productForMainArray)
     this.getProductsFromLocal[productForMainArray[0]] = {
-      productsName: productForMainArray[0],
-      productPrice: productForMainArray[1]
+      productName: productForMainArray[0],
+      productPrice: productForMainArray[1],
+      productImg:getImgOfProduct.slice(22,-2)
     };
     localStorage.setItem('productsInCart', JSON.stringify(this.getProductsFromLocal))
   }

@@ -15,7 +15,7 @@
             </ul>
             <div class="shoppingBasket">
                 <i routerLink="/shop/basket" class="fas fa-shopping-basket fa-2x"></i>
-                <p>0</p>
+                <p>{{numOfProdInCart}}</p>
             </div>
         </div>
         <div class="basketHeader">
@@ -26,9 +26,14 @@
     <div class="basketMain">
        <table class="basketTable">
            <tr>
-               <td>mainTable</td>
-               <td>Quantity</td>
-               <td>Price</td>
+               <th>Product name</th>
+               <th>Quantity</th>
+               <th>Product price</th>
+           </tr>
+           <tr *ngFor="let dataKeys of getKeysOfProductsFromLocal">
+               <td class="productNameAndImg"><div class="productImg" [style.backgroundImage]="'url('+this.products.getProductsFromLocal[dataKeys].productImg+')'"></div><div class="productInfo"><h3>{{this.products.getProductsFromLocal[dataKeys].productName}}</h3></div></td>
+               <td><input type="number"></td>
+               <td>{{this.products.getProductsFromLocal[dataKeys].productPrice}}</td>
                <td><em>Remove</em></td>
            </tr>
        </table>

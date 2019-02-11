@@ -15,7 +15,7 @@
             </ul>
             <div class="shoppingBasket">
                 <i routerLink="/shop/basket" class="fas fa-shopping-basket fa-2x"></i>
-                <p>0</p>
+                <p>{{numOfProdInCart}}</p>
             </div>
         </div>
         <div class="brandsLogo">
@@ -29,7 +29,7 @@
         <div *ngFor="let data of arrayForBrand" class="{{data[0]}}">
             <div class="card-img" [style.backgroundImage]="'url('+data[1]+')'"></div>
             <div class="card-body">
-                <div class="card-title">{{data[2]}} <br> {{data[3]}}</div>
+                <div class="card-title">{{data[2]}} <br>USD {{data[3]}}</div>
                 <div class="card-button">
                     <button (click)='addProductInCart($event)'>ADD TO CART</button>
                 </div>

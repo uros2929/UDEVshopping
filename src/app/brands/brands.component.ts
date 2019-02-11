@@ -9,11 +9,12 @@ import { ProductsObjectsService } from '../products-objects.service';
 export class BrandsComponent implements OnInit {
 
   
-  constructor(private productsObjects:ProductsObjectsService) { }
+  constructor(private products:ProductsObjectsService) { }
 
-  objOfShoes=this.productsObjects.cardsObjShoes;
-  objOfClothes=this.productsObjects.cardObjClothes;
-  objOfAccessories=this.productsObjects.cardObjAccessories;
+  numOfProdInCart=this.products.getNumOfProductsInCart;
+  objOfShoes=this.products.cardsObjShoes;
+  objOfClothes=this.products.cardObjClothes;
+  objOfAccessories=this.products.cardObjAccessories;
 
   index=1;
   arrayForClickedBrand=[];
@@ -23,7 +24,7 @@ export class BrandsComponent implements OnInit {
   arrayForBrand=[];
 
   ngOnInit() {
-   
+    this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
 
@@ -118,6 +119,7 @@ export class BrandsComponent implements OnInit {
     }
   }
   addProductInCart(event) {
-    this.productsObjects.addProductsInLocalStorage(event)
+    this.products.addProductsInLocalStorage(event);
+    this.numOfProdInCart ++;
   }
 }

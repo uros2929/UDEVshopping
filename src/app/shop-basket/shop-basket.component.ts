@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsObjectsService } from '../products-objects.service';
+
 
 @Component({
   selector: 'app-shop-basket',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopBasketComponent implements OnInit {
 
-  constructor() { }
 
+
+  constructor(private products:ProductsObjectsService) {}
+
+  numOfProdInCart=this.products.getNumOfProductsInCart;
+  getKeysOfProductsFromLocal=Object.keys(this.products.getProductsFromLocal);
+  arrayOfproductsNameFromLocalStorage=[];
   ngOnInit() {
+    this.getProductsFromLocalStorage();
+   
   }
 
+  getProductsFromLocalStorage(){
+    for (const prop of this.getKeysOfProductsFromLocal) {
+      console.log(this.products.getProductsFromLocal[prop])
+    }
+  }
+
+
+
+  
 }
+

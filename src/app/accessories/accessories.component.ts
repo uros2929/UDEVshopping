@@ -8,15 +8,16 @@ import { ProductsObjectsService } from '../products-objects.service';
 })
 export class AccessoriesComponent implements OnInit {
 
-  constructor(private objOfAccessories:ProductsObjectsService) { }
+  constructor(private products:ProductsObjectsService) { }
 
-
-  objAccessories=this.objOfAccessories.cardObjAccessories;
+  numOfProdInCart=this.products.getNumOfProductsInCart;
+  objAccessories=this.products.cardObjAccessories;
 
   arrayOfKeysFromObj=[];
   arrayForAccessories=[];
   ngOnInit() {
    this.showProductsForAccessories();
+   this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
   showProductsForAccessories(){
@@ -54,6 +55,7 @@ showSocks(){
   }
 }
 addProductInCart(event) {
-  this.objOfAccessories.addProductsInLocalStorage(event)
+  this.products.addProductsInLocalStorage(event);
+  this.numOfProdInCart ++;
 }
 }

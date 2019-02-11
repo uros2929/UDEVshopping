@@ -9,6 +9,10 @@ import { ProductsObjectsService } from '../products-objects.service';
 export class ClothesComponent implements OnInit {
 
 
+  constructor(private products:ProductsObjectsService) { }
+
+
+  numOfProdInCart=this.products.getNumOfProductsInCart;
   arrayKeysOfCards = [];
   arrayOfCardAll = [];
   index = 1;
@@ -19,16 +23,15 @@ export class ClothesComponent implements OnInit {
     brands: []
   }
 
-  constructor(private clothesObj:ProductsObjectsService) { }
-
   ngOnInit() {
     this.returnKeysShowClothesOnStart(this.index);
+    this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
   returnKeysShowClothesOnStart(index) {
-    this.arrayKeysOfCards = Object.keys(this.clothesObj.cardObjClothes);
+    this.arrayKeysOfCards = Object.keys(this.products.cardObjClothes);
     for (const prop of this.arrayKeysOfCards) {
-      this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+      this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
       index++
     }
   }
@@ -67,32 +70,32 @@ export class ClothesComponent implements OnInit {
   onGenderChanage(gender) {
     let valueOfSize = this.choosenForSearchObj.size[0],
         valueOfBrand = this.choosenForSearchObj.brands[0];
-    this.arrayKeysOfCards = Object.keys(this.clothesObj.cardObjClothes);
+    this.arrayKeysOfCards = Object.keys(this.products.cardObjClothes);
     if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == gender) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == gender) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if(this.choosenForSearchObj.brands[0] != undefined && this.choosenForSearchObj.size[0] != undefined){
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == gender && this.clothesObj.cardObjClothes[prop].size.includes(valueOfSize) && this.clothesObj.cardObjClothes[prop].brand==valueOfBrand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == gender && this.products.cardObjClothes[prop].size.includes(valueOfSize) && this.products.cardObjClothes[prop].brand==valueOfBrand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.brands[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == gender && this.clothesObj.cardObjClothes[prop].brand == valueOfBrand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == gender && this.products.cardObjClothes[prop].brand == valueOfBrand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.size[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == gender && this.clothesObj.cardObjClothes[prop].size.includes(valueOfSize)) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == gender && this.products.cardObjClothes[prop].size.includes(valueOfSize)) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
@@ -102,32 +105,32 @@ export class ClothesComponent implements OnInit {
   onBrandChange(brand) {
     let valueOfGender = this.choosenForSearchObj.gender[0],
         valueOfSize = this.choosenForSearchObj.size[0];
-    this.arrayKeysOfCards = Object.keys(this.clothesObj.cardObjClothes);
+    this.arrayKeysOfCards = Object.keys(this.products.cardObjClothes);
     if (this.choosenForSearchObj.gender[0] == undefined && this.choosenForSearchObj.size[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].brand == brand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].brand == brand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if(this.choosenForSearchObj.gender[0] != undefined && this.choosenForSearchObj.size[0] != undefined){
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == valueOfGender && this.clothesObj.cardObjClothes[prop].size.includes(valueOfSize) && this.clothesObj.cardObjClothes[prop].brand==brand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == valueOfGender && this.products.cardObjClothes[prop].size.includes(valueOfSize) && this.products.cardObjClothes[prop].brand==brand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.gender[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].brand == brand && this.clothesObj.cardObjClothes[prop].gender == valueOfGender) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].brand == brand && this.products.cardObjClothes[prop].gender == valueOfGender) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.size[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].brand == brand && this.clothesObj.cardObjClothes[prop].size.includes(valueOfSize)) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].brand == brand && this.products.cardObjClothes[prop].size.includes(valueOfSize)) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
@@ -137,32 +140,32 @@ export class ClothesComponent implements OnInit {
   onSizeChange(size) {
     let valueOfGender = this.choosenForSearchObj.gender[0],
         valueOfBrand = this.choosenForSearchObj.brands[0];
-    this.arrayKeysOfCards = Object.keys(this.clothesObj.cardObjClothes);
+    this.arrayKeysOfCards = Object.keys(this.products.cardObjClothes);
     if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.gender[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].size.includes(size) == true) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].size.includes(size) == true) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if(this.choosenForSearchObj.brands[0] != undefined && this.choosenForSearchObj.gender[0] != undefined){
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].gender == valueOfGender && this.clothesObj.cardObjClothes[prop].size.includes(size) && this.clothesObj.cardObjClothes[prop].brand==valueOfBrand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].gender == valueOfGender && this.products.cardObjClothes[prop].size.includes(size) && this.products.cardObjClothes[prop].brand==valueOfBrand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.brands[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].size.includes(size) == true && this.clothesObj.cardObjClothes[prop].brand == valueOfBrand) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].size.includes(size) == true && this.products.cardObjClothes[prop].brand == valueOfBrand) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
     }else if (this.choosenForSearchObj.gender[0] != undefined) {
       for (const prop of this.arrayKeysOfCards) {
-        if (this.clothesObj.cardObjClothes[prop].size.includes(size) == true && this.clothesObj.cardObjClothes[prop].gender == valueOfGender) {
-          this.arrayOfCardAll.push([this.clothesObj.cardObjClothes[prop].class + this.index, this.clothesObj.cardObjClothes[prop].img, this.clothesObj.cardObjClothes[prop].title, this.clothesObj.cardObjClothes[prop].price, this.clothesObj.cardObjClothes[prop].gender, this.clothesObj.cardObjClothes[prop].brand, this.clothesObj.cardObjClothes[prop].size]);
+        if (this.products.cardObjClothes[prop].size.includes(size) == true && this.products.cardObjClothes[prop].gender == valueOfGender) {
+          this.arrayOfCardAll.push([this.products.cardObjClothes[prop].class + this.index, this.products.cardObjClothes[prop].img, this.products.cardObjClothes[prop].title, this.products.cardObjClothes[prop].price, this.products.cardObjClothes[prop].gender, this.products.cardObjClothes[prop].brand, this.products.cardObjClothes[prop].size]);
           this.index++
         }
       }
@@ -203,7 +206,8 @@ export class ClothesComponent implements OnInit {
 
   }
   addProductInCart(event) {
-    this.clothesObj.addProductsInLocalStorage(event)
+    this.products.addProductsInLocalStorage(event);
+    this.numOfProdInCart ++;
   }
 
 }
