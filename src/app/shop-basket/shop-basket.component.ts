@@ -17,15 +17,10 @@ export class ShopBasketComponent implements OnInit {
   getKeysOfProductsFromLocal=Object.keys(this.products.getProductsFromLocal);
   arrayOfproductsNameFromLocalStorage=[];
   ngOnInit() {
-    this.getProductsFromLocalStorage();
-   
+    this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
-  getProductsFromLocalStorage(){
-    for (const prop of this.getKeysOfProductsFromLocal) {
-      console.log(this.products.getProductsFromLocal[prop])
-    }
-  }
+
 
 
 
