@@ -13,7 +13,7 @@ export class ProductsObjectsService {
       price: "80$",
       gender: "men",
       brand: 'nike',
-      size: '40,41,43,45'
+      size: ['40 EUR','41 EUR','43 EUR','45 EUR']
     },
     card2: {
       class: "card",
@@ -22,7 +22,7 @@ export class ProductsObjectsService {
       price: "100$",
       gender: "men",
       brand: 'jordan',
-      size: '40,41,42,43,45,45.5,46'
+      size: ['40 EUR','41 EUR','42 EUR','43 EUR','45 EUR','45.5 EUR','46 EUR']
     },
     card3: {
       class: "card",
@@ -31,7 +31,7 @@ export class ProductsObjectsService {
       price: "75$",
       gender: "women",
       brand: 'under armour',
-      size: '35,35.5,36,36.5,37,38'
+      size: ['35 EUR','35.5 EUR','36 EUR','36.5 EUR','37 EUR','38 EUR']
     },
     card4: {
       class: "card",
@@ -40,7 +40,7 @@ export class ProductsObjectsService {
       price: "125$",
       gender: "men",
       brand: "adidas",
-      size: '43,45,45.5,46'
+      size: ['43 EUR','45 EUR','45.5 EUR','46 EUR']
     },
     card5: {
       class: "card",
@@ -49,7 +49,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "kids",
       brand: "jordan",
-      size: '30,31,32,33,34,35'
+      size: ['30 EUR','31 EUR','32 EUR','33 EUR','34 EUR','35 EUR']
     },
     card6: {
       class: "card",
@@ -58,7 +58,7 @@ export class ProductsObjectsService {
       price: "115$",
       gender: "women",
       brand: "jordan",
-      size: "36.5,37,38"
+      size: ['36.5 EUR','37 EUR','38 EUR']
     }
   }
   cardObjClothes = {
@@ -69,7 +69,7 @@ export class ProductsObjectsService {
       price: "80$",
       gender: "men",
       brand: 'nike',
-      size: 'L,XL,XXL'
+      size: ['L','XL','XXL']
     },
     card2: {
       class: "card",
@@ -78,7 +78,7 @@ export class ProductsObjectsService {
       price: "90$",
       gender: "men",
       brand: 'nike',
-      size: 'M,L,XL,XXL'
+      size: ['M','L','XL','XXL']
     },
     card3: {
       class: "card",
@@ -87,7 +87,7 @@ export class ProductsObjectsService {
       price: "100$",
       gender: "men",
       brand: 'nike',
-      size: 'M,L,XL,XXL'
+      size: ['M','L','XL','XXL']
     },
     card4: {
       class: "card",
@@ -96,7 +96,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'adidas',
-      size: 'M,L,XL'
+      size: ['M','L','XL']
     },
     card5: {
       class: "card",
@@ -105,7 +105,7 @@ export class ProductsObjectsService {
       price: "60$",
       gender: "men",
       brand: 'adidas',
-      size: 'M,L,XL'
+      size: ['M','L','XL']
     },
     card6: {
       class: "card",
@@ -114,7 +114,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'adidas',
-      size: 'S,M,L,XL'
+      size: ['S','M','L','XL']
     },
     card7: {
       class: "card",
@@ -123,7 +123,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'under armour',
-      size: 'S,M,L,XL'
+      size: ['S','M','L','XL']
     },
     card8: {
       class: "card",
@@ -132,7 +132,7 @@ export class ProductsObjectsService {
       price: "40$",
       gender: "men",
       brand: 'under armour',
-      size: 'S,M,L,XL'
+      size: ['S','M','L','XL']
     },
     card9: {
       class: "card",
@@ -141,7 +141,7 @@ export class ProductsObjectsService {
       price: "40$",
       gender: "women",
       brand: 'under armour',
-      size: 'XS,S,M,L'
+      size: ['XS','S','M','L']
     },
     card10: {
       class: "card",
@@ -150,7 +150,7 @@ export class ProductsObjectsService {
       price: "70$",
       gender: "women",
       brand: 'under armour',
-      size: 'XS,S,M,L'
+      size: ['XS','s','M','L']
     },
     card11: {
       class: "card",
@@ -159,7 +159,7 @@ export class ProductsObjectsService {
       price: "65$",
       gender: "women",
       brand: 'under armour',
-      size: 'XS,S,M,L'
+      size: ['XS','S','M','L']
     },
     card12: {
       class: "card",
@@ -168,7 +168,7 @@ export class ProductsObjectsService {
       price: "35$",
       gender: "kids",
       brand: 'nike',
-      size: 'XS,S,M'
+      size: ['XS','S','M']
     }
   }
 
@@ -179,7 +179,8 @@ export class ProductsObjectsService {
       title: "ADIDAS BAG 1",
       price: "35$",
       brand: 'adidas',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card2: {
       class: "card",
@@ -187,7 +188,8 @@ export class ProductsObjectsService {
       title: "ADIDAS BAG 2",
       price: "30$",
       brand: 'adidas',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card4: {
       class: "card",
@@ -195,7 +197,8 @@ export class ProductsObjectsService {
       title: "ADIDAS CAP 1",
       price: "25$",
       brand: 'adidas',
-      accessories: 'cap'
+      accessories: 'cap',
+      size: ['one size']
     },
     card5: {
       class: "card",
@@ -203,7 +206,8 @@ export class ProductsObjectsService {
       title: "ADIDAS CAP 2",
       price: "20$",
       brand: 'adidas',
-      accessories: 'cap'
+      accessories: 'cap',
+      size: ['one size']
     },
     card6: {
       class: "card",
@@ -211,7 +215,8 @@ export class ProductsObjectsService {
       title: "ADIDAS SOCKS 1",
       price: "13$",
       brand: 'adidas',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card7: {
       class: "card",
@@ -219,7 +224,8 @@ export class ProductsObjectsService {
       title: "ADIDAS SOCKS 2",
       price: "13$",
       brand: 'adidas',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card8: {
       class: "card",
@@ -227,7 +233,8 @@ export class ProductsObjectsService {
       title: "JORDAN SOCKS 1",
       price: "15$",
       brand: 'jordan',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card9: {
       class: "card",
@@ -235,7 +242,8 @@ export class ProductsObjectsService {
       title: "JORDAN SOCKS 2",
       price: "12$",
       brand: 'jordan',
-      accessories: 'cap'
+      accessories: 'cap',
+      size: ['one size']
     },
     card10: {
       class: "card",
@@ -243,7 +251,8 @@ export class ProductsObjectsService {
       title: "JORDAN SOCKS 3",
       price: "15$",
       brand: 'jordan',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card11: {
       class: "card",
@@ -251,7 +260,8 @@ export class ProductsObjectsService {
       title: "NIKE BAG 1",
       price: "35$",
       brand: 'nike',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card12: {
       class: "card",
@@ -259,7 +269,8 @@ export class ProductsObjectsService {
       title: "NIKE BAG 2",
       price: "30$",
       brand: 'nike',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card13: {
       class: "card",
@@ -267,8 +278,8 @@ export class ProductsObjectsService {
       title: "NIKE CAP 1",
       price: "20$",
       brand: 'nike',
-      accessories: 'cap'
-
+      accessories: 'cap',
+      size: ['one size']
     },
     card14: {
       class: "card",
@@ -276,7 +287,8 @@ export class ProductsObjectsService {
       title: "NIKE CAP 1",
       price: "20$",
       brand: 'nike',
-      accessories: 'cap'
+      accessories: 'cap',
+      size: ['one size']
     },
     card15: {
       class: "card",
@@ -284,7 +296,8 @@ export class ProductsObjectsService {
       title: "NIKE CAP 3",
       price: "25$",
       brand: 'nike',
-      accessories: 'cap'
+      accessories: 'cap',
+      size: ['one size']
     },
     card16: {
       class: "card",
@@ -292,7 +305,8 @@ export class ProductsObjectsService {
       title: "NIKE SOCKS 1",
       price: "12$",
       brand: 'nike',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card17: {
       class: "card",
@@ -300,7 +314,8 @@ export class ProductsObjectsService {
       title: "NIKE SOCKS 2",
       price: "14$",
       brand: 'nike',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card18: {
       class: "card",
@@ -308,7 +323,8 @@ export class ProductsObjectsService {
       title: "NIKE SOCKS 3",
       price: "15$",
       brand: 'nike',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card19: {
       class: "card",
@@ -316,7 +332,8 @@ export class ProductsObjectsService {
       title: "UNDER ARMOUR BAG 1",
       price: "29$",
       brand: 'under armour',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card20: {
       class: "card",
@@ -324,7 +341,8 @@ export class ProductsObjectsService {
       title: "UNDER ARMOUR BAG 2",
       price: "27$",
       brand: 'under armour',
-      accessories: 'bag'
+      accessories: 'bag',
+      size: ['one size']
     },
     card21: {
       class: "card",
@@ -332,7 +350,8 @@ export class ProductsObjectsService {
       title: "UNDER ARMOUR SOCKS 1",
       price: "15$",
       brand: 'under armour',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card22: {
       class: "card",
@@ -340,7 +359,8 @@ export class ProductsObjectsService {
       title: "UNDER ARMOUR SOCKS 2",
       price: "11$",
       brand: 'under armour',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
     card23: {
       class: "card",
@@ -348,7 +368,8 @@ export class ProductsObjectsService {
       title: "JORDAN SOCKS 4",
       price: "15$",
       brand: 'jordan',
-      accessories: 'socks'
+      accessories: 'socks',
+      size: ['one size']
     },
   }
 
@@ -357,15 +378,18 @@ export class ProductsObjectsService {
   constructor() { }
 
   addProductsInLocalStorage(event) {
-    let getProductNameAndPrice = event.target.offsetParent.textContent.slice(0, -11),
+    let getProductNameAndPrice = event.target.offsetParent.children[1].children[0].childNodes[0].textContent,
+        getProductPrice=event.target.offsetParent.children[1].children[0].childNodes[2].textContent,
         getImgOfProduct=event.target.offsetParent.children[0].attributes[2].value,
+        getSizeOfProduct=event.target.offsetParent.children[1].children[0].children[2].value,
       arrayForNameAndPrice = [];
-    arrayForNameAndPrice.push(getProductNameAndPrice);
+    arrayForNameAndPrice.push(getProductNameAndPrice,getProductPrice);
     let productForMainArray = arrayForNameAndPrice.join('').split('USD ');
     this.getProductsFromLocal[productForMainArray[0]] = {
       productName: productForMainArray[0],
       productPrice: productForMainArray[1],
-      productImg:getImgOfProduct.slice(22,-2)
+      productImg:getImgOfProduct.slice(22,-2),
+      productSize:getSizeOfProduct
     };
     localStorage.setItem('productsInCart', JSON.stringify(this.getProductsFromLocal))
   }

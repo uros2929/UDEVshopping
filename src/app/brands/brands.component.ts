@@ -37,20 +37,19 @@ export class BrandsComponent implements OnInit {
   this.keysOfObjProductsAccessories=Object.keys(this.objOfAccessories);
   for (const prop of this.keysOfObjProductsShoes) {
     if(this.objOfShoes[prop].brand == 'nike'){
-      this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+      this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price,this.objOfShoes[prop].size])
     }
   }
   for (const prop of this.keysOfObjProductsClothes) {
     if(this.objOfClothes[prop].brand == 'nike'){
-      this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+      this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price,this.objOfClothes[prop].size])
     }
   }
   for (const prop of this.keysOfObjProductsAccessories) {
     if(this.objOfAccessories[prop].brand == 'nike'){
-      this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price])
+      this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price,this.objOfAccessories[prop].size])
     }
   }
-  
   }
   showJordanProducts(){
     this.arrayForClickedBrand=[];
@@ -60,17 +59,17 @@ export class BrandsComponent implements OnInit {
     this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
     for (const prop of this.keysOfObjProductsShoes) {
       if(this.objOfShoes[prop].brand == 'jordan'){
-        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price,this.objOfShoes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsClothes) {
       if(this.objOfClothes[prop].brand == 'jordan'){
-        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price,this.objOfClothes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsAccessories) {
       if(this.objOfAccessories[prop].brand == 'jordan'){
-        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price])
+        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price,this.objOfAccessories[prop].size])
       }
     }
   }
@@ -82,17 +81,17 @@ export class BrandsComponent implements OnInit {
     this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
     for (const prop of this.keysOfObjProductsShoes) {
       if(this.objOfShoes[prop].brand == 'adidas'){
-        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price,this.objOfShoes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsClothes) {
       if(this.objOfClothes[prop].brand == 'adidas'){
-        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price,this.objOfClothes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsAccessories) {
       if(this.objOfAccessories[prop].brand == 'adidas'){
-        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price])
+        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price,this.objOfAccessories[prop].size])
       }
     }
   }
@@ -104,17 +103,17 @@ export class BrandsComponent implements OnInit {
     this.keysOfObjProductsClothes=Object.keys(this.objOfClothes);
     for (const prop of this.keysOfObjProductsShoes) {
       if(this.objOfShoes[prop].brand == 'under armour'){
-        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price])
+        this.arrayForBrand.push([this.objOfShoes[prop].class,this.objOfShoes[prop].img,this.objOfShoes[prop].title,this.objOfShoes[prop].price,this.objOfShoes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsClothes) {
       if(this.objOfClothes[prop].brand == 'under armour'){
-        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price])
+        this.arrayForBrand.push([this.objOfClothes[prop].class,this.objOfClothes[prop].img,this.objOfClothes[prop].title,this.objOfClothes[prop].price,this.objOfClothes[prop].size])
       }
     }
     for (const prop of this.keysOfObjProductsAccessories) {
       if(this.objOfAccessories[prop].brand == 'under armour'){
-        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price])
+        this.arrayForBrand.push([this.objOfAccessories[prop].class,this.objOfAccessories[prop].img,this.objOfAccessories[prop].title,this.objOfAccessories[prop].price,this.objOfAccessories[prop].size])
       }
     }
   }

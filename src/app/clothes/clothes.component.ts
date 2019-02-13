@@ -26,6 +26,7 @@ export class ClothesComponent implements OnInit {
   ngOnInit() {
     this.returnKeysShowClothesOnStart(this.index);
     this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
+    console.log(this.arrayOfCardAll)
   }
 
   returnKeysShowClothesOnStart(index) {

@@ -31,6 +31,7 @@ export class ShoesMainComponent implements OnInit {
     this.numOfProdInCart=Object.keys(this.products.getProductsFromLocal).length;
   }
 
+
   valueFromSelectListGender(event) {
     let valueOfSelectList = event.target.value;
     this.choosenForSearchObj.gender = [];
@@ -72,6 +73,7 @@ export class ShoesMainComponent implements OnInit {
       this.arrayOfCardAll.push([this.products.cardsObjShoes[prop].class + index, this.products.cardsObjShoes[prop].img, this.products.cardsObjShoes[prop].title, this.products.cardsObjShoes[prop].price, this.products.cardsObjShoes[prop].gender, this.products.cardsObjShoes[prop].brand, this.products.cardsObjShoes[prop].size]);
       index++
     }
+    
   }
 
   onGenderChange(gender) {

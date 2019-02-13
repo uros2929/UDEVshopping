@@ -26,7 +26,7 @@
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 40px;
    grid-template-areas:
-   ". ul shoppingBasket";
+   ". ul .";
     text-align: center;
     ul{
         align-self: center;
@@ -87,7 +87,14 @@
                 text-align: center;
                 border: 1px solid black;
                 em{
+                    border-radius: 25%;
                     cursor: pointer;
+                    padding: 15px 15px;
+
+                }
+                em:hover{
+                    background: rgba(107,107,229,1);
+                    color: white;
                 }
             }
         }
@@ -118,7 +125,32 @@ width: 50%;
         width: 50%;
     }
 }
+.totalPrice{
+    background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
+    color: white;
+    display: grid;
+    height: 150px;
+    text-align: end;
+    h1{
+        align-self: center;
+        margin-right: 5%;
+    }
+    button{
+        background: linear-gradient(to right, rgba(142,142,238,1) 0%,rgba(133,135,236,1) 29%,rgba(119,119,233,1) 62%,rgba(107,107,229,1) 100%);
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+        justify-self: end;
+        margin-right: 5%;
+        width: 15%;
+    }
+    button:hover{
+        background: white;
+        color: rgba(107,107,229,1);
+    }
 
+}
 
 
 

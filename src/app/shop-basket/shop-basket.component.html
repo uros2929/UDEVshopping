@@ -13,10 +13,6 @@
                 <li><a routerLink="/shop/sales">SALES</a></li>
                 <li><a routerLink="/shop/accessories">ACCESSORIES</a></li>
             </ul>
-            <div class="shoppingBasket">
-                <i routerLink="/shop/basket" class="fas fa-shopping-basket fa-2x"></i>
-                <p>{{numOfProdInCart}}</p>
-            </div>
         </div>
         <div class="basketHeader">
             <h2>Your Shopping Cart</h2>
@@ -27,18 +23,23 @@
        <table class="basketTable">
            <tr>
                <th>Product name</th>
+               <th>Size</th>
                <th>Quantity</th>
                <th>Product price</th>
            </tr>
-           <tr *ngFor="let dataKeys of getKeysOfProductsFromLocal">
-               <td class="productNameAndImg"><div class="productImg" [style.backgroundImage]="'url('+this.products.getProductsFromLocal[dataKeys].productImg+')'"></div><div class="productInfo"><h3>{{this.products.getProductsFromLocal[dataKeys].productName}}</h3></div></td>
-               <td><input type="number"></td>
-               <td>{{this.products.getProductsFromLocal[dataKeys].productPrice}}</td>
-               <td><em>Remove</em></td>
+           <tr *ngFor="let dataKeys of arrayOfProductsInLocal">
+               <td class="productNameAndImg"><div class="productImg" [style.backgroundImage]="'url('+dataKeys[2]+')'"></div><div class="productInfo"><h3>{{dataKeys[0]}}</h3></div></td>
+               <td>{{dataKeys[3]}}</td>
+               <td><input type="number" id="{{dataKeys[0]}}" (change)="checkeQuantity($event)"></td>
+               <td>{{dataKeys[1]}}</td>
+               <td><em id="{{dataKeys[0]}}" (click)="removeProductFromCart($event)">Remove</em></td>
            </tr>
        </table>
     </div>
-    <!-- <div class="basketFooter">
-        <h1>FOOTER</h1>
-    </div> -->
+    <div class="basketFooter">
+        <div class="totalPrice">
+            <h1>Total price:{{totalPriceSum}} $</h1>
+            <button>Buy all</button>
+        </div>
+    </div>
 </div>
