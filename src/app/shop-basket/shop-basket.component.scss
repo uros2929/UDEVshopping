@@ -151,7 +151,33 @@ width: 50%;
     }
 
 }
-
+.modalBuy{
+    background: rgba(0,0,0,0.5);
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mainModal{
+    background: white;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    form{
+        margin: 5% auto;
+        text-align: center;
+        width: 50%;
+        input{
+           margin: 1% auto;
+           position: relative;
+           text-align: center;
+           width: 100%;
+        }
+    }
+}
 
 
 

@@ -20,9 +20,11 @@ export class ShopBasketComponent implements OnInit {
   arrayOfProductsInLocal = [];
   arrayOfproductsPriceFromCart = [];
   totalPriceSum;
+  objOrder={};
   ngOnInit() {
     this.getProductsFromLocal();
-    this.totalPrice();
+    this.totalPrice(); 
+    console.log(JSON.parse(localStorage.getItem('orders')))
   }
 
   getProductsFromLocal() {
@@ -64,5 +66,47 @@ export class ShopBasketComponent implements OnInit {
     // console.log(event.target.value)
   }
 
+  openModalBuy(){
+    let modalBuy=document.getElementById('modalBuy');
+    modalBuy.style.display='block';
+  }
+  closeModalBuy(event){
+    let modalBuy=document.getElementById('modalBuy');
+   if (event.target.id=="modalBuy") {
+       modalBuy.style.display='none';
+   }
+  }
+  finishOrder(event){
+    event.preventDefault();
+    let getDataFromFormBuy=event.target.form,
+        modalBuy=document.getElementById('modalBuy');
+        for (let index = 0; index < getDataFromFormBuy.length; index++) {
+          if (getDataFromFormBuy[index].value==="") {
+            alert('All inputs are required !');
+            return;
+          }
+        }
+    let NewobjOrder={
+      firstName:getDataFromFormBuy[0].value,
+      lastName:getDataFromFormBuy[1].value,
+      dateOfBirth:getDataFromFormBuy[2].value,
+      country:getDataFromFormBuy[3].value,
+      city:getDataFromFormBuy[4].value,
+      address:getDataFromFormBuy[5].value,
+      postaCode:getDataFromFormBuy[6].value,
+      products:{
+        productsToSend:this.arrayOfProductsInLocal
+      },
+      TotalPrice:this.totalPriceSum
+    }
+    this.objOrder[NewobjOrder.firstName+NewobjOrder.lastName]=NewobjOrder;  // add more arg for KEY !!
+    localStorage.setItem('orders',JSON.stringify(this.objOrder));
+    modalBuy.style.display="none";
+    this.arrayOfProductsInLocal=[];                                       
+    this.totalPriceSum=0;
+    localStorage.removeItem('productsInCart');
+    alert('Your order is successfully send ! Thank you for shopping :) You can see your order in console !');
+    location.reload();     // JUST FOR CHECK
+  }
 }
 

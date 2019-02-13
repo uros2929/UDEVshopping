@@ -30,7 +30,7 @@
            <tr *ngFor="let dataKeys of arrayOfProductsInLocal">
                <td class="productNameAndImg"><div class="productImg" [style.backgroundImage]="'url('+dataKeys[2]+')'"></div><div class="productInfo"><h3>{{dataKeys[0]}}</h3></div></td>
                <td>{{dataKeys[3]}}</td>
-               <td><input type="number" id="{{dataKeys[0]}}" (change)="checkeQuantity($event)"></td>
+               <td><input type="number" id="{{dataKeys[0]}}" value="1"></td>
                <td>{{dataKeys[1]}}</td>
                <td><em id="{{dataKeys[0]}}" (click)="removeProductFromCart($event)">Remove</em></td>
            </tr>
@@ -39,7 +39,22 @@
     <div class="basketFooter">
         <div class="totalPrice">
             <h1>Total price:{{totalPriceSum}} $</h1>
-            <button>Buy all</button>
+            <button (click)="openModalBuy()">Buy all</button>
         </div>
+    </div>
+</div>
+<div class="modalBuy" id="modalBuy" (click)="closeModalBuy($event)">
+    <div class="mainModal">
+        <form action="?" method="POST" id="formModalBuy">
+            <input type="text" name="firstName" id="firstName" placeholder="First name" required><br>
+            <input type="text" name="lastName" id="lastName" placeholder="Last name" required><br>
+            <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Date of birth" required><br>
+            <input type="text" name="country" id="country" placeholder="Country" required><br>
+            <input type="text" name="city" id="city" placeholder="City" required><br>
+            <input type="text" name="address" id="address" placeholder="Address" required><br>
+            <input type="text" name="postalCode" id="postalCode" placeholder="Postal Code" required>
+            <h3>Total price = {{totalPriceSum}} $</h3>
+            <input type="submit" value="Buy" (click)="finishOrder($event)">
+        </form>
     </div>
 </div>
