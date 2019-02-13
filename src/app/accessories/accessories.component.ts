@@ -23,7 +23,7 @@ export class AccessoriesComponent implements OnInit {
   showProductsForAccessories(){
     this.arrayOfKeysFromObj=Object.keys(this.objAccessories);
     for (const prop of this.arrayOfKeysFromObj) {
-      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories])
+      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories,this.objAccessories[prop].size])
     }
   }
 
@@ -32,7 +32,7 @@ showBags(){
   this.arrayOfKeysFromObj=Object.keys(this.objAccessories);
   for (const prop of this.arrayOfKeysFromObj) {
     if (this.objAccessories[prop].accessories == 'bag') {
-      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories])
+      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories,this.objAccessories[prop].size])
     }
   }
 }
@@ -41,7 +41,7 @@ showCaps(){
   this.arrayOfKeysFromObj=Object.keys(this.objAccessories);
   for (const prop of this.arrayOfKeysFromObj) {
     if (this.objAccessories[prop].accessories == 'cap') {
-      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories])
+      this.arrayForAccessories.push([this.objAccessories[prop].class,this.objAccessories[prop].img,this.objAccessories[prop].title,this.objAccessories[prop].price,this.objAccessories[prop].brand,this.objAccessories[prop].accessories,this.objAccessories[prop].size])
     }
   }
 }
