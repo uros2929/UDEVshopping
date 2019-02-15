@@ -2,7 +2,7 @@
     animation: contactStart 1.5s both;
     display: grid;
     grid-template-columns: 15% 10% 50% 10% 15%;
-    grid-template-rows: 10% 50% 50% 4%;
+    grid-template-rows: 10% 50% 50% 6%;
     grid-row-gap: 1%;
     grid-template-areas: 
     "logo logo logo logo logo"
@@ -62,5 +62,18 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@media only screen and (max-width:450px){
+    .contact{
+        grid-template-rows: 10% 70% 50% 10%;
+    }
+    .contactInformations{
+        h1{
+            font-size: 26px
+        }
+        h3{
+            font-size: 20px;
+        }
     }
 }
