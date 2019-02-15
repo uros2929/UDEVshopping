@@ -13,7 +13,7 @@ export class ProductsObjectsService {
       price: "80$",
       gender: "men",
       brand: 'nike',
-      size: ['40 EUR','41 EUR','43 EUR','45 EUR']
+      size: ['40 EUR', '41 EUR', '43 EUR', '45 EUR']
     },
     card2: {
       class: "card",
@@ -22,7 +22,7 @@ export class ProductsObjectsService {
       price: "100$",
       gender: "men",
       brand: 'jordan',
-      size: ['40 EUR','41 EUR','42 EUR','43 EUR','45 EUR','45.5 EUR','46 EUR']
+      size: ['40 EUR', '41 EUR', '42 EUR', '43 EUR', '45 EUR', '45.5 EUR', '46 EUR']
     },
     card3: {
       class: "card",
@@ -31,7 +31,7 @@ export class ProductsObjectsService {
       price: "75$",
       gender: "women",
       brand: 'under armour',
-      size: ['35 EUR','35.5 EUR','36 EUR','36.5 EUR','37 EUR','38 EUR']
+      size: ['35 EUR', '35.5 EUR', '36 EUR', '36.5 EUR', '37 EUR', '38 EUR']
     },
     card4: {
       class: "card",
@@ -40,7 +40,7 @@ export class ProductsObjectsService {
       price: "125$",
       gender: "men",
       brand: "adidas",
-      size: ['43 EUR','45 EUR','45.5 EUR','46 EUR']
+      size: ['43 EUR', '45 EUR', '45.5 EUR', '46 EUR']
     },
     card5: {
       class: "card",
@@ -49,7 +49,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "kids",
       brand: "jordan",
-      size: ['30 EUR','31 EUR','32 EUR','33 EUR','34 EUR','35 EUR']
+      size: ['30 EUR', '31 EUR', '32 EUR', '33 EUR', '34 EUR', '35 EUR']
     },
     card6: {
       class: "card",
@@ -58,7 +58,7 @@ export class ProductsObjectsService {
       price: "115$",
       gender: "women",
       brand: "jordan",
-      size: ['36.5 EUR','37 EUR','38 EUR']
+      size: ['36.5 EUR', '37 EUR', '38 EUR']
     }
   }
   cardObjClothes = {
@@ -69,7 +69,7 @@ export class ProductsObjectsService {
       price: "80$",
       gender: "men",
       brand: 'nike',
-      size: ['L','XL','XXL']
+      size: ['L', 'XL', 'XXL']
     },
     card2: {
       class: "card",
@@ -78,7 +78,7 @@ export class ProductsObjectsService {
       price: "90$",
       gender: "men",
       brand: 'nike',
-      size: ['M','L','XL','XXL']
+      size: ['M', 'L', 'XL', 'XXL']
     },
     card3: {
       class: "card",
@@ -87,7 +87,7 @@ export class ProductsObjectsService {
       price: "100$",
       gender: "men",
       brand: 'nike',
-      size: ['M','L','XL','XXL']
+      size: ['M', 'L', 'XL', 'XXL']
     },
     card4: {
       class: "card",
@@ -96,7 +96,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'adidas',
-      size: ['M','L','XL']
+      size: ['M', 'L', 'XL']
     },
     card5: {
       class: "card",
@@ -105,7 +105,7 @@ export class ProductsObjectsService {
       price: "60$",
       gender: "men",
       brand: 'adidas',
-      size: ['M','L','XL']
+      size: ['M', 'L', 'XL']
     },
     card6: {
       class: "card",
@@ -114,7 +114,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'adidas',
-      size: ['S','M','L','XL']
+      size: ['S', 'M', 'L', 'XL']
     },
     card7: {
       class: "card",
@@ -123,7 +123,7 @@ export class ProductsObjectsService {
       price: "50$",
       gender: "men",
       brand: 'under armour',
-      size: ['S','M','L','XL']
+      size: ['S', 'M', 'L', 'XL']
     },
     card8: {
       class: "card",
@@ -132,7 +132,7 @@ export class ProductsObjectsService {
       price: "40$",
       gender: "men",
       brand: 'under armour',
-      size: ['S','M','L','XL']
+      size: ['S', 'M', 'L', 'XL']
     },
     card9: {
       class: "card",
@@ -141,7 +141,7 @@ export class ProductsObjectsService {
       price: "40$",
       gender: "women",
       brand: 'under armour',
-      size: ['XS','S','M','L']
+      size: ['XS', 'S', 'M', 'L']
     },
     card10: {
       class: "card",
@@ -150,7 +150,7 @@ export class ProductsObjectsService {
       price: "70$",
       gender: "women",
       brand: 'under armour',
-      size: ['XS','s','M','L']
+      size: ['XS', 's', 'M', 'L']
     },
     card11: {
       class: "card",
@@ -159,7 +159,7 @@ export class ProductsObjectsService {
       price: "65$",
       gender: "women",
       brand: 'under armour',
-      size: ['XS','S','M','L']
+      size: ['XS', 'S', 'M', 'L']
     },
     card12: {
       class: "card",
@@ -168,7 +168,7 @@ export class ProductsObjectsService {
       price: "35$",
       gender: "kids",
       brand: 'nike',
-      size: ['XS','S','M']
+      size: ['XS', 'S', 'M']
     }
   }
 
@@ -374,22 +374,24 @@ export class ProductsObjectsService {
   }
 
   getProductsFromLocal = localStorage.getItem('productsInCart') !== null ? JSON.parse(localStorage.getItem('productsInCart')) : {};
-  getNumOfProductsInCart=Object.keys(this.getProductsFromLocal).length;
+  getKeysOfProductsInLocal= Object.keys(this.getProductsFromLocal);
+  getNumOfProductsInCart = Object.keys(this.getProductsFromLocal).length;
   constructor() { }
 
   addProductsInLocalStorage(event) {
     let getProductNameAndPrice = event.target.offsetParent.children[1].children[0].childNodes[0].textContent,
-        getProductPrice=event.target.offsetParent.children[1].children[0].childNodes[2].textContent,
-        getImgOfProduct=event.target.offsetParent.children[0].attributes[2].value,
-        getSizeOfProduct=event.target.offsetParent.children[1].children[0].children[2].value,
+      getProductPrice = event.target.offsetParent.children[1].children[0].childNodes[2].textContent,
+      getImgOfProduct = event.target.offsetParent.children[0].attributes[2].value,
+      getSizeOfProduct = event.target.offsetParent.children[1].children[0].children[2].value,
       arrayForNameAndPrice = [];
-    arrayForNameAndPrice.push(getProductNameAndPrice,getProductPrice);
+    arrayForNameAndPrice.push(getProductNameAndPrice, getProductPrice);
     let productForMainArray = arrayForNameAndPrice.join('').split('USD ');
     this.getProductsFromLocal[productForMainArray[0]] = {
       productName: productForMainArray[0],
       productPrice: productForMainArray[1],
-      productImg:getImgOfProduct.slice(22,-2),
-      productSize:getSizeOfProduct
+      productImg: getImgOfProduct.slice(22, -2),
+      productSize: getSizeOfProduct,
+      quantity: 1
     };
     localStorage.setItem('productsInCart', JSON.stringify(this.getProductsFromLocal))
   }

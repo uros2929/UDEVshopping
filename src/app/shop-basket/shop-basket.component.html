@@ -30,7 +30,7 @@
            <tr *ngFor="let dataKeys of arrayOfProductsInLocal">
                <td class="productNameAndImg"><div class="productImg" [style.backgroundImage]="'url('+dataKeys[2]+')'"></div><div class="productInfo"><h3>{{dataKeys[0]}}</h3></div></td>
                <td>{{dataKeys[3]}}</td>
-               <td><input type="number" id="{{dataKeys[0]}}" value="1"></td>
+               <td><input type="number" id="{{dataKeys[0]}}" value="{{dataKeys[4]}}" (change)="checkeQuantity($event)"></td>
                <td>{{dataKeys[1]}}</td>
                <td><em id="{{dataKeys[0]}}" (click)="removeProductFromCart($event)">Remove</em></td>
            </tr>
