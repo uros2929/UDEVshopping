@@ -122,3 +122,15 @@
         opacity: 0;
     }
 }
+@media only screen and (max-width:500px){
+.startPageAboutUs,.startPageContact,.startPageGallery,.startPageShop{
+    h1{
+        font-size: 1.5rem;
+    }
+}
+.startPageAboutUs:hover,.startPageShop:hover,.startPageContact:hover,.startPageGallery:hover{
+    h1{
+        font-size: 1.5rem;
+    }
+}
+}
