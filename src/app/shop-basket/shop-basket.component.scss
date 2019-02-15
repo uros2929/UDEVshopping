@@ -96,6 +96,9 @@
                     background: rgba(107,107,229,1);
                     color: white;
                 }
+                input{
+                    text-align: center;
+                }
             }
         }
     }
@@ -197,4 +200,35 @@ width: 50%;
     100%{
         opacity: 1;
     }
+}
+
+@media only screen and (max-width:1000px){
+    .productNameAndImg{
+        .productInfo{
+            height: 200px;
+        }
+        .productImg{
+            height: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width:800px){
+.productNameAndImg{
+    .productInfo{
+        height: 150px;
+    }
+    .productImg{
+        height: 150px;
+    }
+}
+.basketTable{
+    tr{
+        td{
+            input{
+                width: 50%;
+            }
+        }
+    }
+}
 }

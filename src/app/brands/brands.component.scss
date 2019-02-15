@@ -174,4 +174,28 @@
         opacity: 1;
     }
 }
+@media only screen and (max-width:800px){
+    .brandsMain{
+        grid-template-columns: auto auto auto;
+        .card{
+            .card-img{
+                height: 50%;
+                width: 100%;
+            }
+            .card-body{
+                .card-title{
+                    select{
+                        text-align: center;
+                        width: 50%;
+                    }
+                }
+                .card-button{
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
 

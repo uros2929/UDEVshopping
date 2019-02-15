@@ -154,7 +154,7 @@
     }
     .shoesShop{
         display: grid;
-        grid-template-columns: 24% 1% 24% 1% 24% 1% 24%;
+        grid-template-columns: auto auto auto auto;
         grid-template-rows: 100% 100% 100% 100% 100%;
         grid-template-areas: 
         "card1 . card2 . card3 . card4"
@@ -205,8 +205,6 @@
 }
 
 
-
-
 @keyframes shoseStart{
     0%{
         opacity: 0;
@@ -214,4 +212,67 @@
     100%{
         opacity: 1;
     }
+}
+@media only screen and (max-width:800px){
+    .shoesMain{
+        .shoesSearch{
+            select{
+                width: 95%;
+            }
+            .shoseBrand{
+                width: 95%;
+                h4{
+                    font-size: 18px;
+                }
+            }
+            .shoseSize{
+                height: 25%;
+                width: 95%;
+                h4{
+                    font-size: 18px;
+                }
+            }
+            button{
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+        .shoesShop{
+            grid-template-columns: 32% 1% 32% 1% 32% 1%;
+            grid-template-rows: 80% 80%;
+            .card{
+                .card-img{
+                    height: 40%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .card-body{
+                    height: 85%;
+                    .card-title{
+                        font-weight: 600;
+                        height: 60%;
+                    }
+                    select{
+                        width: 100%;
+                    }
+                    .card-button{
+                       button{
+                        background-color: white;
+                        border: 2px solid rgba(107,107,229,1);
+                        border-radius: 25%;
+                        padding: 5px;
+                        width: 100%;
+                       }
+                       button:hover{
+                        background-color: rgba(107,107,229,1);
+                        color: white;
+                        cursor: pointer;
+                    }
+                    }
+                }
+            }
+         }
+    
+    }
+ 
 }

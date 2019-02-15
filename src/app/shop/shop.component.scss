@@ -116,28 +116,6 @@
         text-align: center;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes shopStart{
     0%{
         opacity: 0;
@@ -145,4 +123,11 @@
     100%{
         opacity: 1;
     }
+}
+
+@media only screen and (max-width:800px){
+    .shopMainMarketing{
+        grid-template-rows:2% 30% 35% 30% 5%;
+    }
+    
 }
