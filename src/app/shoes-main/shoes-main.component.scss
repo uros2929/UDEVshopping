@@ -337,9 +337,8 @@
         }
     }
     .shoesMain{
-        grid-template-columns: 100%;
         grid-template-areas: 
-        "shoesShop";
+        "shoesShop shoesShop";
         .shoesShop{
             .card{
                 .card-img{
@@ -358,7 +357,10 @@
                 height: 30%;
             }
             .shoseSize{
-                height: 35%;
+                height: 30%;
+            }
+            button{
+                margin-top: 5%;
             }
         }
     }
