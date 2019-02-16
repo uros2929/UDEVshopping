@@ -6,6 +6,9 @@
             </a>
         </div>
         <div class="shopNavBar">
+                <div class="barsIconDiv">
+                        <i class="fas fa-bars fa-2x" (click)="this.modalsResponsive.openModalNavBarResponsive()"></i>
+                </div>
             <ul>
                 <li><a routerLink="/shop/shoes">SHOES</a></li>
                 <li><a routerLink="/shop/clothes">CLOTHES</a></li>
@@ -20,3 +23,14 @@
         </div>
     </div>
 </div>
+<div class="modalForResponsiveNavBar" id="modalForResponsiveNavBar" (click)="this.modalsResponsive.closeModalNavBarResponsive($event)">
+        <div class="ResponsiveUlList">
+            <ul>
+                <li><a routerLink="/shop/shoes">SHOES</a></li>
+                <li><a routerLink="/shop/clothes">CLOTHES</a></li>
+                <li><a routerLink="/shop/brands">BRANDS</a></li>
+                <li><a routerLink="/shop/sales">SALES</a></li>
+                <li><a routerLink="/shop/accessories">ACCESSORIES</a></li>
+            </ul>
+        </div>
+    </div>

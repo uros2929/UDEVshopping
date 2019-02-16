@@ -29,6 +29,10 @@
    grid-template-areas:
    ". ul shoppingBasket";
     text-align: center;
+    .barsIconDiv{
+        display: none;
+        grid-area:barsIcon;
+    }
     ul{
         align-self: center;
         display: flex;
@@ -66,6 +70,37 @@
         }
     }
 }
+.modalForResponsiveNavBar{
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .ResponsiveUlList{
+        align-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: grid;
+        height: 50%;
+        justify-content: center;
+        left: 25%;
+        position: fixed;
+        top: 25%;
+        width: 50%;
+        ul{
+            list-style: none;
+            li{
+                line-height: 30px;
+                text-align: center;
+                a{
+                    color: black;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -76,5 +111,23 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@media only screen and (max-width:700px){
+    .shopNavBar{
+        grid-template-areas:
+        ". barsIcon shoppingBasket";
+        .barsIconDiv{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            i{
+                align-self: center; 
+                cursor: pointer;
+            }
+        }
+        ul{
+            display: none;
+        }
     }
 }

@@ -395,5 +395,4 @@ export class ProductsObjectsService {
     };
     localStorage.setItem('productsInCart', JSON.stringify(this.getProductsFromLocal))
   }
-
 }

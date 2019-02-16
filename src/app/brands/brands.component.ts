@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsObjectsService } from '../products-objects.service';
+import { ModalsForResponsiveService } from '../modals-for-responsive.service';
 
 @Component({
   selector: 'app-brands',
@@ -9,7 +10,7 @@ import { ProductsObjectsService } from '../products-objects.service';
 export class BrandsComponent implements OnInit {
 
   
-  constructor(private products:ProductsObjectsService) { }
+  constructor(private products:ProductsObjectsService,private modalsResponsive:ModalsForResponsiveService) { }
 
   numOfProdInCart=this.products.getNumOfProductsInCart;
   objOfShoes=this.products.cardsObjShoes;

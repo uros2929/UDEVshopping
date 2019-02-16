@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsObjectsService } from '../products-objects.service';
+import { ModalsForResponsiveService } from '../modals-for-responsive.service';
 
 
 
@@ -12,7 +13,7 @@ export class ShopBasketComponent implements OnInit {
 
 
 
-  constructor(private products: ProductsObjectsService) { }
+  constructor(private products: ProductsObjectsService,private modalsResponsive:ModalsForResponsiveService) { }
 
 
   getKeysOfProductsFromLocal = Object.keys(this.products.getProductsFromLocal);

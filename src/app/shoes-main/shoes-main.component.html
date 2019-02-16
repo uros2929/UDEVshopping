@@ -10,7 +10,7 @@
                     <i class="fas fa-filter fa-2x"></i>
             </div>
             <div class="barsIconDiv">
-                    <i class="fas fa-bars fa-2x"></i>
+                    <i class="fas fa-bars fa-2x" (click)="this.modalsResponsive.openModalNavBarResponsive()"></i>
             </div>
             <ul>
                 <li><a routerLink="/shop/shoes">SHOES</a></li>
@@ -91,3 +91,14 @@
             <h3 id="messageNoInStock">No product in stock at the moment!</h3>
         </div>
     </div>
+    <div class="modalForResponsiveNavBar" id="modalForResponsiveNavBar" (click)="this.modalsResponsive.closeModalNavBarResponsive($event)">
+            <div class="ResponsiveUlList">
+                <ul>
+                    <li><a routerLink="/shop/shoes">SHOES</a></li>
+                    <li><a routerLink="/shop/clothes">CLOTHES</a></li>
+                    <li><a routerLink="/shop/brands">BRANDS</a></li>
+                    <li><a routerLink="/shop/sales">SALES</a></li>
+                    <li><a routerLink="/shop/accessories">ACCESSORIES</a></li>
+                </ul>
+            </div>
+        </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsObjectsService } from '../products-objects.service';
+import { ModalsForResponsiveService } from '../modals-for-responsive.service';
 
 @Component({
   selector: 'app-shop',
@@ -10,7 +11,7 @@ export class ShopComponent implements OnInit {
 
  
 
-  constructor(private products:ProductsObjectsService) { }
+  constructor(private products:ProductsObjectsService, private modalsResponsive:ModalsForResponsiveService) { }
 
   marketing1Array = ['nike-air-max-720-aurora-boreal-AO2924-001.jpg', 'kickz_reebok_DMX_series1600.jpg', 'giles_angel_nike_shoe(pp_w1400_h1063).jpg'];
   marketing2Array = ['kickz_deva_state_quadrate.jpg'];
