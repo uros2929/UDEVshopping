@@ -234,6 +234,37 @@
             width: 80%;
         }
     }
+    .modalForResponsiveNavBar{
+        background-color: rgba(0,0,0,0.3);
+        display: none;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        .ResponsiveUlList{
+            align-content: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: grid;
+            height: 50%;
+            justify-content: center;
+            left: 25%;
+            position: fixed;
+            top: 25%;
+            width: 50%;
+            ul{
+                list-style: none;
+                li{
+                    line-height: 30px;
+                    text-align: center;
+                    a{
+                        color: black;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
   
 
 @keyframes clothesStart{
@@ -314,7 +345,21 @@
     grid-template-areas: 
     "clothesShop clothesShop";
     .clothesSearch{
+        background:linear-gradient(to bottom, rgba(102,102,102,0.8) 0%,rgba(91,91,91,0.8) 18%,rgba(121,121,121,0.8) 31%,rgba(181,181,181,0.8) 45%,rgba(181,181,181,1) 56%,rgba(255,255,255,1) 100%);
         display: none;
+        height: 85%;
+        position: fixed;
+        width: 50%;
+        z-index: 2;
+        .clothesBrand{
+            height: 30%;
+        }
+        .clothesSize{
+            height: 30%;
+        }
+        button{
+            margin-top: 3%;
+        }
     }
 }
 .clothesShop{
@@ -326,37 +371,7 @@
       }
    }
 }
-}
-.modalForResponsiveNavBar{
-    background-color: rgba(0,0,0,0.3);
-    display: none;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    .ResponsiveUlList{
-        align-content: center;
-        background-color: rgba(255, 255, 255, 0.8);
-        display: grid;
-        height: 50%;
-        justify-content: center;
-        left: 25%;
-        position: fixed;
-        top: 25%;
-        width: 50%;
-        ul{
-            list-style: none;
-            li{
-                line-height: 30px;
-                text-align: center;
-                a{
-                    color: black;
-                    font-weight: 600;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+
 }
 @media only screen and (max-width:500px){
     .clothesShop{

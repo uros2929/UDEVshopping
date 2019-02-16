@@ -341,7 +341,6 @@
         grid-template-areas: 
         "shoesShop";
         .shoesShop{
-            z-index: 1;
             .card{
                 .card-img{
                     height: 100%;
@@ -349,10 +348,18 @@
             }
         }
         .shoesSearch{
-            background:linear-gradient(to bottom, rgba(102,102,102,0.8) 0%,rgba(91,91,91,0.8) 18%,rgba(121,121,121,0.8) 31%,rgba(181,181,181,0.8) 45%,rgba(181,181,181,0.8) 56%,rgba(255,255,255,0.8) 73%);
+            background:linear-gradient(to bottom, rgba(102,102,102,0.8) 0%,rgba(91,91,91,0.8) 18%,rgba(121,121,121,0.8) 31%,rgba(181,181,181,0.8) 45%,rgba(181,181,181,1) 56%,rgba(255,255,255,1) 100%);
             display: none;
-            position: absolute;
+            height: 85%;
+            position: fixed;
+            width: 50%;
             z-index: 2;
+            .shoseBrand{
+                height: 30%;
+            }
+            .shoseSize{
+                height: 35%;
+            }
         }
     }
 }

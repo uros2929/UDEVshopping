@@ -7,7 +7,7 @@
         </div>
         <div class="shopNavBar">
                 <div class="filterIconDiv">
-                        <i class="fas fa-filter fa-2x"></i>
+                        <i class="fas fa-filter fa-2x" (click)="this.modalsResponsive.openCloseModalSearchResponsive('clothesSearch')"></i>
                 </div>
                 <div class="barsIconDiv">
                         <i class="fas fa-bars fa-2x"  (click)="this.modalsResponsive.openModalNavBarResponsive()"></i>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="clothesMain">
-        <div class="clothesSearch">
+        <div class="clothesSearch" id="clothesSearch">
             <select name="gender" id="selectGender" (change)="valueFromSelectListGender($event)">
                 <option value="all" selected>ALL</option>
                 <option value="men">MEN</option>

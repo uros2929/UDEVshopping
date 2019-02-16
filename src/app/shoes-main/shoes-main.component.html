@@ -7,7 +7,7 @@
         </div>
         <div class="shopNavBar">
             <div class="filterIconDiv">
-                    <i class="fas fa-filter fa-2x"></i>
+                    <i class="fas fa-filter fa-2x" (click)="this.modalsResponsive.openCloseModalSearchResponsive('shoesSearch')"></i>
             </div>
             <div class="barsIconDiv">
                     <i class="fas fa-bars fa-2x" (click)="this.modalsResponsive.openModalNavBarResponsive()"></i>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="shoesMain">
-        <div class="shoesSearch">
+        <div class="shoesSearch" id="shoesSearch">
             <select name="gender" id="selectGender" (change)="valueFromSelectListGender($event)">
                 <option value="" selected>ALL</option>
                 <option value="men">MEN</option>
@@ -74,6 +74,7 @@
                     <input type="radio" name="size" id="size" value="46 EUR"> 46
                     <input type="radio" name="size" id="size" value="46.5 EUR">46.5
                 </form>
+               
             </div>
             <button (click)="resetSearch()">RESET</button>
         </div>

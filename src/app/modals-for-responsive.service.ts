@@ -7,12 +7,28 @@ export class ModalsForResponsiveService {
 
   constructor() { }
 
-  openModalNavBarResponsive(){
-    document.getElementById('modalForResponsiveNavBar').style.display="block";
+  openModalNavBarResponsive() {
+    document.getElementById('modalForResponsiveNavBar').style.display = "block";
   }
-  closeModalNavBarResponsive(event){
-    if(event.target.id == "modalForResponsiveNavBar"){
-      document.getElementById('modalForResponsiveNavBar').style.display="none";
+  closeModalNavBarResponsive(event) {
+    if (event.target.id == "modalForResponsiveNavBar") {
+      document.getElementById('modalForResponsiveNavBar').style.display = "none";
     }
+  }
+  openCloseModalSearchResponsive(div) {
+    if (document.getElementById(div).style.display == "") {
+      document.getElementById(div).style.display = "block"
+    } else {
+      document.getElementById(div).style.display = ""
+    }
+
+  }
+  openCloseModalSearchResponsiveAccessories(div){
+    if (document.getElementById(div).style.display == "") {
+      document.getElementById(div).style.display = "grid"
+    } else {
+      document.getElementById(div).style.display = ""
+    }
+
   }
 }
