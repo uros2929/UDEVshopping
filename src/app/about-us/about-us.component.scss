@@ -135,10 +135,10 @@
         "footer footer footer footer footer";  
     }
 }
-@media only screen and (max-width:520px){
+@media only screen and (max-width:520px), screen and(max-height:650px){
     .aboutUsMain{
         grid-template-columns: 5% 20% 50% 20% 5%;
-        grid-template-rows:5% 45% 30% 30% 6%;
+        grid-template-rows:5% 70% 50% 30% 6%;
         grid-template-areas:
         ". . . . ."
         ". aboutUsMainText aboutUsMainText aboutUsMainText ."
@@ -149,4 +149,9 @@
             font-size: 20px;
         }
     }
+}
+@media only screen and (max-width:360px), screen and(max-height:660px){
+.aboutUsMain{
+    grid-template-rows:5% 80% 50% 30% 10%; 
+}
 }
