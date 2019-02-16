@@ -17,7 +17,7 @@ export class ModalsForResponsiveService {
   }
   openCloseModalSearchResponsive(div) {
     if (document.getElementById(div).style.display == "") {
-      document.getElementById(div).style.display = "block"
+      document.getElementById(div).style.display = "flex"
     } else {
       document.getElementById(div).style.display = ""
     }
