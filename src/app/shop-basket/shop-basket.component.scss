@@ -28,6 +28,11 @@
    grid-template-areas:
    ". ul .";
     text-align: center;
+    .barsIconDiv{
+        align-content: center;
+        display: none;
+        grid-area: barsIcon;
+    }
     ul{
         align-self: center;
         display: flex;
@@ -158,13 +163,13 @@ width: 50%;
     background: rgba(0,0,0,0.5);
     display: none;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
 }
 .mainModal{
     background: white;
-    height: 50%;
+    height: 70%;
     position: absolute;
     top: 25%;
     left: 25%;
@@ -229,6 +234,59 @@ width: 50%;
                 width: 50%;
             }
         }
+    }
+}
+.mainModal{
+    left: 10%;
+    width: 80%;
+    form{
+        width: 70%;
+    }
+}
+}
+@media only screen and (max-width:650px){
+    .productNameAndImg{
+        .productInfo{
+            height: 100px;
+            width: 35%;
+            h3{
+                font-size: 14px;
+            }
+        }
+        .productImg{
+            height: 100px;
+            width: 65%;
+        }
+    }
+    .totalPrice{
+        h1{
+            font-size: 18px;
+        }
+        button{
+            font-size: 18px;
+            width: 30%;
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    .shopNavBar{
+        grid-template-areas:
+        ". barsIcon .";
+        .barsIconDiv{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            display: none;
+        }
+    }
+.productNameAndImg{
+    .productImg{
+        display: none;
+    }
+    .productInfo{
+        width: 100%;
     }
 }
 }
