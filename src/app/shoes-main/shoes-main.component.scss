@@ -163,14 +163,14 @@
     .shoesShop{
         display: grid;
         grid-template-columns: 24% 1% 24% 1% 24% 1% 24%;
-        grid-template-rows: 100% 100% 100% 100% 100%;
+        grid-auto-rows: 100%;
         grid-template-areas: 
         "card1 . card2 . card3 . card4"
         "card5 . card6 . card7 . card8"
         "card9 . card10 . card11 . card12"
         "card13 . card14 . card15 . card16"
         "card17 . card18 . card19 . card20";
-        height: 50%;
+        height: 600px;
         text-align: center;
         width: 100%;
         grid-area:shoesShop; 
@@ -278,7 +278,7 @@
         }
         .shoesShop{
             grid-template-columns: 32% 1% 32% 1% 32% 1%;
-            grid-template-rows: 100% 100%;
+            grid-auto-rows: 80%;
             grid-template-areas: 
             "card1 . card2 . card3 . "
             "card4 . card5 . card6 . "
@@ -343,7 +343,7 @@
         .shoesShop{
             .card{
                 .card-img{
-                    height: 100%;
+                    height: 60%;
                 }
             }
         }
@@ -367,7 +367,7 @@
 .shoesMain{
     .shoesShop{
         grid-template-columns: 49% 1% 49%;
-        grid-template-rows: 100% 100% 100% 100%;
+        grid-auto-rows: 100%;
         grid-template-areas: 
         "card1 . card2 "
         "card3 . card4 "
@@ -376,7 +376,6 @@
         
         .card{
             .card-img{
-                height: 100%;
                 background-size: contain;
                 background-repeat: no-repeat;
             }
@@ -412,11 +411,12 @@
     .shoesMain{
         .shoesShop{
             grid-template-columns: 100%;
-            grid-template-rows: 100% 100% 100% 100% 100% 100% 100% 100% 100% ;
+            grid-auto-rows: 100%;
             grid-template-areas:"card1""card2""card3""card4""card5""card6""card7""card8";
             
             .card{
                 .card-img{
+                    align-self: center;
                     height: 100%;
                     background-size: contain;
                     background-repeat: no-repeat;

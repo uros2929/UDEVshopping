@@ -186,9 +186,9 @@
 }
     .clothesShop{
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: 100% 100% 100% 100% 100% 100%;
-        height: 50%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-auto-rows: 100%;
+        height: 600px;
         text-align: center;
         width: 100%;
         grid-area:clothesShop; 
@@ -198,7 +198,7 @@
                 background-repeat: no-repeat;
                 margin: 0 auto;
                 height: 50%;
-                width: 50%;
+                width: 90%;
             }
             .card-body{
                 height: 40%;
@@ -304,7 +304,7 @@
         grid-template-columns: auto auto auto;
         .card{
             .card-img{
-                height: 50%;
+                height: 45%;
                 width: 100%;
             }
             .card-body{
@@ -376,7 +376,7 @@
 @media only screen and (max-width:500px){
     .clothesShop{
         grid-template-columns: auto auto;
-        grid-template-rows: 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        grid-auto-rows: 100%;
         .card{
             .card-img{
                 height: 40%;
@@ -384,7 +384,7 @@
             }
             .card-body{
                 .card-title{
-                    height: 40%;
+                    height: 50%;
                 }
             }
         }
@@ -393,15 +393,15 @@
 @media only screen and (max-width:400px){
     .clothesShop{
         grid-template-columns: auto;
-        grid-template-rows: 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60%;
+        grid-auto-rows: 100%;
         .card{
             .card-img{
-                height: 85%;
-                width: 100%;
+                height: 50%;
+                width: 85%;
             }
             .card-body{
                 .card-title{
-                    height: 70%;
+                    height: 45%;
                 }
             }
         }

@@ -54,7 +54,7 @@
             </div>
             <button (click)="resetSearch()">RESET</button>
         </div>
-        <div class="clothesShop">
+        <div class="clothesShop" id="clothesShop">
             <div class="card" *ngFor="let data of arrayOfCardAll">
                 <div class="card-img" [style.backgroundImage]="'url('+data[1]+')'"></div>
                 <div class="card-body">
