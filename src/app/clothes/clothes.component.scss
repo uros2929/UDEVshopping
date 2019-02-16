@@ -29,6 +29,14 @@
    grid-template-areas:
    ". ul shoppingBasket";
     text-align: center;
+    .filterIconDiv{
+        display: none;
+        grid-area: filterIcon;
+    }
+    .barsIconDiv{
+        display: none;
+        grid-area: barsIcon;
+    }
     ul{
         align-self: center;
         display: flex;
@@ -279,6 +287,75 @@
                     button{
                         width: 100%;
                     }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:700px){
+.shopNavBar{
+    grid-template-areas:
+    "filterIcon barsIcon shoppingBasket";
+    ul{
+        display: none;
+    }
+    .barsIconDiv{
+        align-self: center;
+        cursor: pointer;
+        display: block;
+    }
+    .filterIconDiv{
+        align-self: center;
+        cursor: pointer;
+        display: block;
+    }
+}
+.clothesMain{
+    grid-template-areas: 
+    "clothesShop clothesShop";
+    .clothesSearch{
+        display: none;
+    }
+}
+.clothesShop{
+   .card{
+      .card-body{
+          .card-title{
+              height: 70%;
+          }
+      }
+   }
+}
+}
+@media only screen and (max-width:500px){
+    .clothesShop{
+        grid-template-columns: auto auto;
+        grid-template-rows: 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+        .card{
+            .card-img{
+                height: 40%;
+                width: 80%;
+            }
+            .card-body{
+                .card-title{
+                    height: 40%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:400px){
+    .clothesShop{
+        grid-template-columns: auto;
+        grid-template-rows: 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60% 60%;
+        .card{
+            .card-img{
+                height: 85%;
+                width: 100%;
+            }
+            .card-body{
+                .card-title{
+                    height: 70%;
                 }
             }
         }

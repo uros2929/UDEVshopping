@@ -29,6 +29,10 @@
        grid-template-areas:
        ". ul shoppingBasket";
         text-align: center;
+        .barsIconDiv{
+            display: none;
+            grid-area: barsIcon;
+        }
         ul{
             align-self: center;
             display: flex;
@@ -130,4 +134,25 @@
         grid-template-rows:2% 30% 35% 30% 5%;
     }
     
+}
+@media only screen and (max-width:700px){
+.shopMainMarketing{
+        grid-template-rows:2% 60% 60% 60% 5%;
+}
+.shopNavBar{
+    grid-template-areas:
+    ". barsIcon shoppingBasket";
+    ul{
+        display: none;
+    }
+    .barsIconDiv{
+        align-self: center;
+        display: block;
+    }
+}
+}
+@media only screen and (max-width:420px){
+    .shopMainMarketing{
+        grid-template-rows:2% 40% 40% 40% 8%;
+}
 }

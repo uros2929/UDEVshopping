@@ -84,6 +84,10 @@
    grid-template-areas:
    ". ul shoppingBasket";
     text-align: center;
+    .barsIconDiv{
+        display: none;
+        grid-area: barsIcon;
+    }
     ul{
         align-self: center;
         display: flex;
@@ -198,4 +202,42 @@
         }
     }
 }
-
+@media only screen and (max-width:700px){
+.shopNavBar{
+    grid-template-areas:
+    ". barsIcon shoppingBasket";
+    ul{
+        display: none;
+    }
+    .barsIconDiv{
+        align-self: center;
+        cursor: pointer;
+        display: block;
+    }
+}
+.brandsMain{
+    grid-template-rows: 80% 80% 80% 80% 80%;
+}
+}
+@media only screen and (max-width:550px){
+    .brandsMain{
+        grid-template-columns: auto auto;
+        grid-template-rows: 80% 80% 80% 80% 80% 80% 80% 80% 80% 80%; 
+    }
+}
+@media only screen and (max-width:420px){
+    .brandsMain{
+        grid-template-columns: auto;
+        grid-template-rows: 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80% 80%; 
+        .card{
+            .card-img{
+                height: 60%;
+            }
+            .card-body{
+                .card-title{
+                    height: 50%;
+                }
+            }
+        }
+    }
+}
