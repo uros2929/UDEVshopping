@@ -10,7 +10,7 @@ import { ModalsForResponsiveService } from '../modals-for-responsive.service';
 export class ClothesComponent implements OnInit {
 
 
-  constructor(private products:ProductsObjectsService,private modalsResponsive:ModalsForResponsiveService) { }
+  constructor(private products:ProductsObjectsService,public modalsResponsive:ModalsForResponsiveService) { }
 
 
   numOfProdInCart=this.products.getNumOfProductsInCart;

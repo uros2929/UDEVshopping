@@ -13,7 +13,7 @@ export class ShopBasketComponent implements OnInit {
 
 
 
-  constructor(private products: ProductsObjectsService,private modalsResponsive:ModalsForResponsiveService) { }
+  constructor(private products: ProductsObjectsService,public modalsResponsive:ModalsForResponsiveService) { }
 
 
   getKeysOfProductsFromLocal = Object.keys(this.products.getProductsFromLocal);
