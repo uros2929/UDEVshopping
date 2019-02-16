@@ -150,7 +150,7 @@ export class ProductsObjectsService {
       price: "70$",
       gender: "women",
       brand: 'under armour',
-      size: ['XS', 's', 'M', 'L']
+      size: ['XS', 'S', 'M', 'L']
     },
     card11: {
       class: "card",
