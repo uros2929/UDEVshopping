@@ -45,38 +45,37 @@
             <div class="shoseSize">
                 <h4>CHOOSE SIZE</h4>
                 <form action="?" method="POST" id="chooseSize" (change)="valueFromSize($event)">
-                    <input type="radio" name="size" id="size" value="30"> 30
-                    <input type="radio" name="size" id="size" value="31"> 31
-                    <input type="radio" name="size" id="size" value="32"> 32
-                    <input type="radio" name="size" id="size" value="33"> 33
-                    <input type="radio" name="size" id="size" value="34"> 34
-                    <input type="radio" name="size" id="size" value="35"> 35
-                    <input type="radio" name="size" id="size" value="36"> 36
-                    <input type="radio" name="size" id="size" value="36.5"> 36.5
-                    <input type="radio" name="size" id="size" value="37"> 37
-                    <input type="radio" name="size" id="size" value="37.5">37.5
-                    <input type="radio" name="size" id="size" value="38"> 38
-                    <input type="radio" name="size" id="size" value="38.5">38.5
-                    <input type="radio" name="size" id="size" value="39"> 39
-                    <input type="radio" name="size" id="size" value="39.5">39.5
-                    <input type="radio" name="size" id="size" value="40"> 40
-                    <input type="radio" name="size" id="size" value="40.5">40.5
-                    <input type="radio" name="size" id="size" value="41"> 41
-                    <input type="radio" name="size" id="size" value="41.5">41.5
-                    <input type="radio" name="size" id="size" value="42"> 42
-                    <input type="radio" name="size" id="size" value="42.5">42.5
-                    <input type="radio" name="size" id="size" value="43"> 43
-                    <input type="radio" name="size" id="size" value="43.5">43.5
-                    <input type="radio" name="size" id="size" value="44"> 44
-                    <input type="radio" name="size" id="size" value="44.5">44.5
-                    <input type="radio" name="size" id="size" value="45"> 45
-                    <input type="radio" name="size" id="size" value="45.5">45.5
-                    <input type="radio" name="size" id="size" value="46"> 46
-                    <input type="radio" name="size" id="size" value="46.5">46.5
+                    <input type="radio" name="size" id="size" value="30 EUR"> 30
+                    <input type="radio" name="size" id="size" value="31 EUR"> 31
+                    <input type="radio" name="size" id="size" value="32 EUR"> 32
+                    <input type="radio" name="size" id="size" value="33 EUR"> 33
+                    <input type="radio" name="size" id="size" value="34 EUR"> 34
+                    <input type="radio" name="size" id="size" value="35 EUR"> 35
+                    <input type="radio" name="size" id="size" value="36 EUR"> 36
+                    <input type="radio" name="size" id="size" value="36.5 EUR"> 36.5
+                    <input type="radio" name="size" id="size" value="37 EUR"> 37
+                    <input type="radio" name="size" id="size" value="37.5 EUR">37.5
+                    <input type="radio" name="size" id="size" value="38 EUR"> 38
+                    <input type="radio" name="size" id="size" value="38.5 EUR">38.5
+                    <input type="radio" name="size" id="size" value="39 EUR"> 39
+                    <input type="radio" name="size" id="size" value="39.5 EUR">39.5
+                    <input type="radio" name="size" id="size" value="40 EUR"> 40
+                    <input type="radio" name="size" id="size" value="40.5 EUR">40.5
+                    <input type="radio" name="size" id="size" value="41 EUR"> 41
+                    <input type="radio" name="size" id="size" value="41.5 EUR">41.5
+                    <input type="radio" name="size" id="size" value="42 EUR"> 42
+                    <input type="radio" name="size" id="size" value="42.5 EUR">42.5
+                    <input type="radio" name="size" id="size" value="43 EUR"> 43
+                    <input type="radio" name="size" id="size" value="43.5 EUR">43.5
+                    <input type="radio" name="size" id="size" value="44 EUR"> 44
+                    <input type="radio" name="size" id="size" value="44.5 EUR">44.5
+                    <input type="radio" name="size" id="size" value="45 EUR"> 45
+                    <input type="radio" name="size" id="size" value="45.5 EUR">45.5
+                    <input type="radio" name="size" id="size" value="46 EUR"> 46
+                    <input type="radio" name="size" id="size" value="46.5 EUR">46.5
                 </form>
             </div>
             <button (click)="resetSearch()">RESET</button>
-            <p>If you 100% true search, click reset button, after first search !</p>
         </div>
         <div class="shoesShop">
             <div *ngFor="let data of arrayOfCardAll" [style.gridArea]="data[0]" class="card">
@@ -102,3 +101,4 @@
                 </ul>
             </div>
         </div>
+      

@@ -151,7 +151,7 @@ export class ShoesMainComponent implements OnInit {
 
   onSizeChange(size) {
     let valueOfGender = this.choosenForSearchObj.gender[0],
-      valueOfBrand = this.choosenForSearchObj.brands[0];
+        valueOfBrand = this.choosenForSearchObj.brands[0];
     this.arrayKeysOfCards = Object.keys(this.products.cardsObjShoes);
     if (this.choosenForSearchObj.brands[0] == undefined && this.choosenForSearchObj.gender[0] == undefined) {
       for (const prop of this.arrayKeysOfCards) {
